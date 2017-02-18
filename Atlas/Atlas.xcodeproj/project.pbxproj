@@ -38,6 +38,13 @@
 		C1EDE80E1E58F1A300362F54 /* ChangeQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE80D1E58F1A300362F54 /* ChangeQueue.swift */; };
 		C1EDE8101E58F1A800362F54 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE80F1E58F1A800362F54 /* Stack.swift */; };
 		C1EDE8121E58F1D100362F54 /* TilesetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8111E58F1D100362F54 /* TilesetData.swift */; };
+		C1EDE8141E58F4E400362F54 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8131E58F4E400362F54 /* Archive.swift */; };
+		C1EDE8191E58F4EE00362F54 /* ArchiveIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8161E58F4EE00362F54 /* ArchiveIO.swift */; };
+		C1EDE81A1E58F4EE00362F54 /* TileMapIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8171E58F4EE00362F54 /* TileMapIO.swift */; };
+		C1EDE81B1E58F4EE00362F54 /* TilesetIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8181E58F4EE00362F54 /* TilesetIO.swift */; };
+		C1EDE81D1E58F50200362F54 /* AtomicMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE81C1E58F50200362F54 /* AtomicMap.swift */; };
+		C1EDE81F1E58F54500362F54 /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE81E1E58F54500362F54 /* FileIO.swift */; };
+		C1EDE8211E58FB2800362F54 /* ActorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +93,13 @@
 		C1EDE80D1E58F1A300362F54 /* ChangeQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChangeQueue.swift; path = Source/Models/ChangeQueue.swift; sourceTree = "<group>"; };
 		C1EDE80F1E58F1A800362F54 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = Source/Models/Stack.swift; sourceTree = "<group>"; };
 		C1EDE8111E58F1D100362F54 /* TilesetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TilesetData.swift; path = Source/Models/TilesetData.swift; sourceTree = "<group>"; };
+		C1EDE8131E58F4E400362F54 /* Archive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Archive.swift; path = Source/Models/Archive.swift; sourceTree = "<group>"; };
+		C1EDE8161E58F4EE00362F54 /* ArchiveIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArchiveIO.swift; path = Source/IO/ArchiveIO.swift; sourceTree = "<group>"; };
+		C1EDE8171E58F4EE00362F54 /* TileMapIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileMapIO.swift; path = Source/IO/TileMapIO.swift; sourceTree = "<group>"; };
+		C1EDE8181E58F4EE00362F54 /* TilesetIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TilesetIO.swift; path = Source/IO/TilesetIO.swift; sourceTree = "<group>"; };
+		C1EDE81C1E58F50200362F54 /* AtomicMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicMap.swift; path = Source/Models/AtomicMap.swift; sourceTree = "<group>"; };
+		C1EDE81E1E58F54500362F54 /* FileIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileIO.swift; path = Source/IO/FileIO.swift; sourceTree = "<group>"; };
+		C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActorDelegate.swift; path = Source/Models/ActorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +142,7 @@
 		C1A4CC891E58C6ED003D1869 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
+				C1EDE8151E58F4E700362F54 /* IO */,
 				C1EDE8021E58F02800362F54 /* Views */,
 				C1EDE7ED1E58EA5500362F54 /* Resources */,
 				C1EDE7DA1E58E7FA00362F54 /* Models */,
@@ -169,9 +184,12 @@
 		C1EDE7DA1E58E7FA00362F54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */,
+				C1EDE8131E58F4E400362F54 /* Archive.swift */,
 				C1EDE80B1E58F16100362F54 /* Tileset.swift */,
 				C1EDE8111E58F1D100362F54 /* TilesetData.swift */,
 				C1EDE8091E58F14900362F54 /* TileMap.swift */,
+				C1EDE81C1E58F50200362F54 /* AtomicMap.swift */,
 				C1EDE7EB1E58EA1600362F54 /* Coordinate.swift */,
 				C1EDE80D1E58F1A300362F54 /* ChangeQueue.swift */,
 				C1EDE80F1E58F1A800362F54 /* Stack.swift */,
@@ -234,6 +252,17 @@
 				C1EDE8051E58F08D00362F54 /* TileView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C1EDE8151E58F4E700362F54 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				C1EDE8161E58F4EE00362F54 /* ArchiveIO.swift */,
+				C1EDE8171E58F4EE00362F54 /* TileMapIO.swift */,
+				C1EDE8181E58F4EE00362F54 /* TilesetIO.swift */,
+				C1EDE81E1E58F54500362F54 /* FileIO.swift */,
+			);
+			name = IO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,19 +380,26 @@
 				C1EDE7E71E58E82000362F54 /* SKSpriteNodeUtility.swift in Sources */,
 				C1EDE80C1E58F16100362F54 /* Tileset.swift in Sources */,
 				C1EDE7E41E58E82000362F54 /* ColorUtility.swift in Sources */,
+				C1EDE81F1E58F54500362F54 /* FileIO.swift in Sources */,
 				C1EDE8071E58F08D00362F54 /* TileMapView.swift in Sources */,
 				C1EDE7E61E58E82000362F54 /* RandomUtility.swift in Sources */,
 				C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */,
 				C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */,
+				C1EDE81B1E58F4EE00362F54 /* TilesetIO.swift in Sources */,
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
 				C1EDE8081E58F08D00362F54 /* TileView.swift in Sources */,
+				C1EDE8191E58F4EE00362F54 /* ArchiveIO.swift in Sources */,
+				C1EDE8141E58F4E400362F54 /* Archive.swift in Sources */,
 				C1EDE8101E58F1A800362F54 /* Stack.swift in Sources */,
 				C1EDE8121E58F1D100362F54 /* TilesetData.swift in Sources */,
 				C1EDE8061E58F08D00362F54 /* ChangeIndicator.swift in Sources */,
 				C1EDE80E1E58F1A300362F54 /* ChangeQueue.swift in Sources */,
 				C1EDE80A1E58F14900362F54 /* TileMap.swift in Sources */,
 				C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */,
+				C1EDE81A1E58F4EE00362F54 /* TileMapIO.swift in Sources */,
 				C1EDE7E21E58E82000362F54 /* ACEaseUtility.swift in Sources */,
+				C1EDE8211E58FB2800362F54 /* ActorDelegate.swift in Sources */,
+				C1EDE81D1E58F50200362F54 /* AtomicMap.swift in Sources */,
 				C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */,
 				C1EDE7EC1E58EA1600362F54 /* Coordinate.swift in Sources */,
 			);
