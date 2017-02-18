@@ -30,6 +30,14 @@
 		C1EDE7FF1E58EA7400362F54 /* Crypt.tileset in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7FA1E58EA7400362F54 /* Crypt.tileset */; };
 		C1EDE8001E58EA7400362F54 /* Rust.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7FC1E58EA7400362F54 /* Rust.atlas */; };
 		C1EDE8011E58EA7400362F54 /* Rust.tileset in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7FD1E58EA7400362F54 /* Rust.tileset */; };
+		C1EDE8061E58F08D00362F54 /* ChangeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8031E58F08D00362F54 /* ChangeIndicator.swift */; };
+		C1EDE8071E58F08D00362F54 /* TileMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8041E58F08D00362F54 /* TileMapView.swift */; };
+		C1EDE8081E58F08D00362F54 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8051E58F08D00362F54 /* TileView.swift */; };
+		C1EDE80A1E58F14900362F54 /* TileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8091E58F14900362F54 /* TileMap.swift */; };
+		C1EDE80C1E58F16100362F54 /* Tileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE80B1E58F16100362F54 /* Tileset.swift */; };
+		C1EDE80E1E58F1A300362F54 /* ChangeQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE80D1E58F1A300362F54 /* ChangeQueue.swift */; };
+		C1EDE8101E58F1A800362F54 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE80F1E58F1A800362F54 /* Stack.swift */; };
+		C1EDE8121E58F1D100362F54 /* TilesetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8111E58F1D100362F54 /* TilesetData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +78,14 @@
 		C1EDE7FA1E58EA7400362F54 /* Crypt.tileset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Crypt.tileset; sourceTree = "<group>"; };
 		C1EDE7FC1E58EA7400362F54 /* Rust.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Rust.atlas; sourceTree = "<group>"; };
 		C1EDE7FD1E58EA7400362F54 /* Rust.tileset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rust.tileset; sourceTree = "<group>"; };
+		C1EDE8031E58F08D00362F54 /* ChangeIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChangeIndicator.swift; path = Source/Views/ChangeIndicator.swift; sourceTree = "<group>"; };
+		C1EDE8041E58F08D00362F54 /* TileMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileMapView.swift; path = Source/Views/TileMapView.swift; sourceTree = "<group>"; };
+		C1EDE8051E58F08D00362F54 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileView.swift; path = Source/Views/TileView.swift; sourceTree = "<group>"; };
+		C1EDE8091E58F14900362F54 /* TileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileMap.swift; path = Source/Models/TileMap.swift; sourceTree = "<group>"; };
+		C1EDE80B1E58F16100362F54 /* Tileset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tileset.swift; path = Source/Models/Tileset.swift; sourceTree = "<group>"; };
+		C1EDE80D1E58F1A300362F54 /* ChangeQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChangeQueue.swift; path = Source/Models/ChangeQueue.swift; sourceTree = "<group>"; };
+		C1EDE80F1E58F1A800362F54 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = Source/Models/Stack.swift; sourceTree = "<group>"; };
+		C1EDE8111E58F1D100362F54 /* TilesetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TilesetData.swift; path = Source/Models/TilesetData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +169,12 @@
 		C1EDE7DA1E58E7FA00362F54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C1EDE80B1E58F16100362F54 /* Tileset.swift */,
+				C1EDE8111E58F1D100362F54 /* TilesetData.swift */,
+				C1EDE8091E58F14900362F54 /* TileMap.swift */,
 				C1EDE7EB1E58EA1600362F54 /* Coordinate.swift */,
+				C1EDE80D1E58F1A300362F54 /* ChangeQueue.swift */,
+				C1EDE80F1E58F1A800362F54 /* Stack.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -208,6 +229,9 @@
 		C1EDE8021E58F02800362F54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C1EDE8031E58F08D00362F54 /* ChangeIndicator.swift */,
+				C1EDE8041E58F08D00362F54 /* TileMapView.swift */,
+				C1EDE8051E58F08D00362F54 /* TileView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -325,11 +349,19 @@
 			files = (
 				C1EDE7E31E58E82000362F54 /* AngleUtility.swift in Sources */,
 				C1EDE7E71E58E82000362F54 /* SKSpriteNodeUtility.swift in Sources */,
+				C1EDE80C1E58F16100362F54 /* Tileset.swift in Sources */,
 				C1EDE7E41E58E82000362F54 /* ColorUtility.swift in Sources */,
+				C1EDE8071E58F08D00362F54 /* TileMapView.swift in Sources */,
 				C1EDE7E61E58E82000362F54 /* RandomUtility.swift in Sources */,
 				C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */,
 				C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */,
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
+				C1EDE8081E58F08D00362F54 /* TileView.swift in Sources */,
+				C1EDE8101E58F1A800362F54 /* Stack.swift in Sources */,
+				C1EDE8121E58F1D100362F54 /* TilesetData.swift in Sources */,
+				C1EDE8061E58F08D00362F54 /* ChangeIndicator.swift in Sources */,
+				C1EDE80E1E58F1A300362F54 /* ChangeQueue.swift in Sources */,
+				C1EDE80A1E58F14900362F54 /* TileMap.swift in Sources */,
 				C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */,
 				C1EDE7E21E58E82000362F54 /* ACEaseUtility.swift in Sources */,
 				C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */,
