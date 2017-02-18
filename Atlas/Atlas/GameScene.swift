@@ -82,8 +82,8 @@ class GameScene: SKScene, ActorDelegate
     
     override func update(_ currentTime: TimeInterval)
 	{
-		// Apply 10 changes per cycle
-		for _ in 0...10
+		// changes per cycle
+		for _ in 0...1
 		{
 			_ = map.applyNextChange()
 		}

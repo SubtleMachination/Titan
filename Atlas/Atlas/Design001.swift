@@ -1,5 +1,5 @@
 //
-//  GenModule1.swift
+//  PlaceTileMod.swift
 //  Atlas Core
 //
 //  Created by Dusty Artifact on 7/5/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Agent
+class Design001
 {
 	let delegate:ActorDelegate
 	
@@ -17,8 +17,16 @@ class Agent
 		self.delegate = delegate
 	}
 	
-	func activate()
+	func trigger()
 	{
-		Design001(delegate:delegate).trigger()
+		for x in 0..<32
+		{
+			for y in 0..<32
+			{
+				let coord = DiscreteTileCoord(x:x, y:y)
+				PlaceTile(delegate:delegate, coord:coord, tile:1).trigger()
+			}
+			
+		}
 	}
 }
