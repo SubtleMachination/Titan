@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */; };
 		C1A4CC8D1E58C6ED003D1869 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */; };
-		C1A4CC8F1E58C6ED003D1869 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC8E1E58C6ED003D1869 /* Actions.sks */; };
 		C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC901E58C6ED003D1869 /* GameScene.swift */; };
 		C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC921E58C6ED003D1869 /* ViewController.swift */; };
 		C1A4CC951E58C6ED003D1869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC941E58C6ED003D1869 /* Assets.xcassets */; };
@@ -31,7 +30,6 @@
 		C1A4CC871E58C6ED003D1869 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		C1A4CC8E1E58C6ED003D1869 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		C1A4CC901E58C6ED003D1869 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		C1A4CC921E58C6ED003D1869 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1A4CC941E58C6ED003D1869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 			children = (
 				C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */,
 				C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */,
-				C1A4CC8E1E58C6ED003D1869 /* Actions.sks */,
 				C1A4CC901E58C6ED003D1869 /* GameScene.swift */,
 				C1A4CC921E58C6ED003D1869 /* ViewController.swift */,
 				C1A4CC941E58C6ED003D1869 /* Assets.xcassets */,
@@ -188,7 +185,6 @@
 			files = (
 				C1A4CC8D1E58C6ED003D1869 /* GameScene.sks in Resources */,
 				C1A4CC951E58C6ED003D1869 /* Assets.xcassets in Resources */,
-				C1A4CC8F1E58C6ED003D1869 /* Actions.sks in Resources */,
 				C1A4CC981E58C6ED003D1869 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +404,7 @@
 				C1A4CCA91E58C6ED003D1869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1A4CCAA1E58C6ED003D1869 /* Build configuration list for PBXNativeTarget "AtlasTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +413,7 @@
 				C1A4CCAC1E58C6ED003D1869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
