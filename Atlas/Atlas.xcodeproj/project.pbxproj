@@ -112,6 +112,7 @@
 		C1A4CC891E58C6ED003D1869 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
+				C1EDE8021E58F02800362F54 /* Views */,
 				C1EDE7ED1E58EA5500362F54 /* Resources */,
 				C1EDE7DA1E58E7FA00362F54 /* Models */,
 				C1EDE7CB1E58E76C00362F54 /* Utility */,
@@ -202,6 +203,13 @@
 				C1EDE7FD1E58EA7400362F54 /* Rust.tileset */,
 			);
 			path = Rust;
+			sourceTree = "<group>";
+		};
+		C1EDE8021E58F02800362F54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
