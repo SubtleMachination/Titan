@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */; };
+		C1A4CC8D1E58C6ED003D1869 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */; };
+		C1A4CC8F1E58C6ED003D1869 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC8E1E58C6ED003D1869 /* Actions.sks */; };
+		C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC901E58C6ED003D1869 /* GameScene.swift */; };
+		C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC921E58C6ED003D1869 /* ViewController.swift */; };
+		C1A4CC951E58C6ED003D1869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC941E58C6ED003D1869 /* Assets.xcassets */; };
+		C1A4CC981E58C6ED003D1869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC961E58C6ED003D1869 /* Main.storyboard */; };
+		C1A4CCA31E58C6ED003D1869 /* AtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CCA21E58C6ED003D1869 /* AtlasTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1A4CC9F1E58C6ED003D1869 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1A4CC7F1E58C6ED003D1869 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1A4CC861E58C6ED003D1869;
+			remoteInfo = Atlas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C1A4CC871E58C6ED003D1869 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		C1A4CC8E1E58C6ED003D1869 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		C1A4CC901E58C6ED003D1869 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C1A4CC921E58C6ED003D1869 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1A4CC941E58C6ED003D1869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1A4CC971E58C6ED003D1869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1A4CC991E58C6ED003D1869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1A4CC9E1E58C6ED003D1869 /* AtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A4CCA21E58C6ED003D1869 /* AtlasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasTests.swift; sourceTree = "<group>"; };
+		C1A4CCA41E58C6ED003D1869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1A4CC841E58C6ED003D1869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A4CC9B1E58C6ED003D1869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1A4CC7E1E58C6ED003D1869 = {
+			isa = PBXGroup;
+			children = (
+				C1A4CC891E58C6ED003D1869 /* Atlas */,
+				C1A4CCA11E58C6ED003D1869 /* AtlasTests */,
+				C1A4CC881E58C6ED003D1869 /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		C1A4CC881E58C6ED003D1869 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4CC871E58C6ED003D1869 /* Atlas.app */,
+				C1A4CC9E1E58C6ED003D1869 /* AtlasTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1A4CC891E58C6ED003D1869 /* Atlas */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */,
+				C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */,
+				C1A4CC8E1E58C6ED003D1869 /* Actions.sks */,
+				C1A4CC901E58C6ED003D1869 /* GameScene.swift */,
+				C1A4CC921E58C6ED003D1869 /* ViewController.swift */,
+				C1A4CC941E58C6ED003D1869 /* Assets.xcassets */,
+				C1A4CC961E58C6ED003D1869 /* Main.storyboard */,
+				C1A4CC991E58C6ED003D1869 /* Info.plist */,
+			);
+			path = Atlas;
+			sourceTree = "<group>";
+		};
+		C1A4CCA11E58C6ED003D1869 /* AtlasTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4CCA21E58C6ED003D1869 /* AtlasTests.swift */,
+				C1A4CCA41E58C6ED003D1869 /* Info.plist */,
+			);
+			path = AtlasTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1A4CC861E58C6ED003D1869 /* Atlas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1A4CCA71E58C6ED003D1869 /* Build configuration list for PBXNativeTarget "Atlas" */;
+			buildPhases = (
+				C1A4CC831E58C6ED003D1869 /* Sources */,
+				C1A4CC841E58C6ED003D1869 /* Frameworks */,
+				C1A4CC851E58C6ED003D1869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Atlas;
+			productName = Atlas;
+			productReference = C1A4CC871E58C6ED003D1869 /* Atlas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1A4CC9D1E58C6ED003D1869 /* AtlasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1A4CCAA1E58C6ED003D1869 /* Build configuration list for PBXNativeTarget "AtlasTests" */;
+			buildPhases = (
+				C1A4CC9A1E58C6ED003D1869 /* Sources */,
+				C1A4CC9B1E58C6ED003D1869 /* Frameworks */,
+				C1A4CC9C1E58C6ED003D1869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1A4CCA01E58C6ED003D1869 /* PBXTargetDependency */,
+			);
+			name = AtlasTests;
+			productName = AtlasTests;
+			productReference = C1A4CC9E1E58C6ED003D1869 /* AtlasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1A4CC7F1E58C6ED003D1869 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Overmind;
+				TargetAttributes = {
+					C1A4CC861E58C6ED003D1869 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					C1A4CC9D1E58C6ED003D1869 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C1A4CC861E58C6ED003D1869;
+					};
+				};
+			};
+			buildConfigurationList = C1A4CC821E58C6ED003D1869 /* Build configuration list for PBXProject "Atlas" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1A4CC7E1E58C6ED003D1869;
+			productRefGroup = C1A4CC881E58C6ED003D1869 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1A4CC861E58C6ED003D1869 /* Atlas */,
+				C1A4CC9D1E58C6ED003D1869 /* AtlasTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1A4CC851E58C6ED003D1869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1A4CC8D1E58C6ED003D1869 /* GameScene.sks in Resources */,
+				C1A4CC951E58C6ED003D1869 /* Assets.xcassets in Resources */,
+				C1A4CC8F1E58C6ED003D1869 /* Actions.sks in Resources */,
+				C1A4CC981E58C6ED003D1869 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A4CC9C1E58C6ED003D1869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1A4CC831E58C6ED003D1869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
+				C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */,
+				C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A4CC9A1E58C6ED003D1869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1A4CCA31E58C6ED003D1869 /* AtlasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1A4CCA01E58C6ED003D1869 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1A4CC861E58C6ED003D1869 /* Atlas */;
+			targetProxy = C1A4CC9F1E58C6ED003D1869 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1A4CC961E58C6ED003D1869 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1A4CC971E58C6ED003D1869 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1A4CCA51E58C6ED003D1869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C1A4CCA61E58C6ED003D1869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		C1A4CCA81E58C6ED003D1869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Atlas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.overmind.Atlas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C1A4CCA91E58C6ED003D1869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Atlas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.overmind.Atlas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C1A4CCAB1E58C6ED003D1869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AtlasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.overmind.AtlasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atlas.app/Contents/MacOS/Atlas";
+			};
+			name = Debug;
+		};
+		C1A4CCAC1E58C6ED003D1869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AtlasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.overmind.AtlasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atlas.app/Contents/MacOS/Atlas";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1A4CC821E58C6ED003D1869 /* Build configuration list for PBXProject "Atlas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1A4CCA51E58C6ED003D1869 /* Debug */,
+				C1A4CCA61E58C6ED003D1869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1A4CCA71E58C6ED003D1869 /* Build configuration list for PBXNativeTarget "Atlas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1A4CCA81E58C6ED003D1869 /* Debug */,
+				C1A4CCA91E58C6ED003D1869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C1A4CCAA1E58C6ED003D1869 /* Build configuration list for PBXNativeTarget "AtlasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1A4CCAB1E58C6ED003D1869 /* Debug */,
+				C1A4CCAC1E58C6ED003D1869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1A4CC7F1E58C6ED003D1869 /* Project object */;
+}
