@@ -14,6 +14,14 @@
 		C1A4CC951E58C6ED003D1869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC941E58C6ED003D1869 /* Assets.xcassets */; };
 		C1A4CC981E58C6ED003D1869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC961E58C6ED003D1869 /* Main.storyboard */; };
 		C1A4CCA31E58C6ED003D1869 /* AtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CCA21E58C6ED003D1869 /* AtlasTests.swift */; };
+		C1EDE7E21E58E82000362F54 /* ACEaseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7DB1E58E82000362F54 /* ACEaseUtility.swift */; };
+		C1EDE7E31E58E82000362F54 /* AngleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7DC1E58E82000362F54 /* AngleUtility.swift */; };
+		C1EDE7E41E58E82000362F54 /* ColorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7DD1E58E82000362F54 /* ColorUtility.swift */; };
+		C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7DE1E58E82000362F54 /* IntUtility.swift */; };
+		C1EDE7E61E58E82000362F54 /* RandomUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7DF1E58E82000362F54 /* RandomUtility.swift */; };
+		C1EDE7E71E58E82000362F54 /* SKSpriteNodeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7E01E58E82000362F54 /* SKSpriteNodeUtility.swift */; };
+		C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7E11E58E82000362F54 /* UserDefaultsUtility.swift */; };
+		C1EDE7EA1E58E8AF00362F54 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7E91E58E8AF00362F54 /* Coordinate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,14 @@
 		C1A4CC9E1E58C6ED003D1869 /* AtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A4CCA21E58C6ED003D1869 /* AtlasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasTests.swift; sourceTree = "<group>"; };
 		C1A4CCA41E58C6ED003D1869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1EDE7DB1E58E82000362F54 /* ACEaseUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ACEaseUtility.swift; path = Source/Utility/ACEaseUtility.swift; sourceTree = "<group>"; };
+		C1EDE7DC1E58E82000362F54 /* AngleUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AngleUtility.swift; path = Source/Utility/AngleUtility.swift; sourceTree = "<group>"; };
+		C1EDE7DD1E58E82000362F54 /* ColorUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorUtility.swift; path = Source/Utility/ColorUtility.swift; sourceTree = "<group>"; };
+		C1EDE7DE1E58E82000362F54 /* IntUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntUtility.swift; path = Source/Utility/IntUtility.swift; sourceTree = "<group>"; };
+		C1EDE7DF1E58E82000362F54 /* RandomUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomUtility.swift; path = Source/Utility/RandomUtility.swift; sourceTree = "<group>"; };
+		C1EDE7E01E58E82000362F54 /* SKSpriteNodeUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SKSpriteNodeUtility.swift; path = Source/Utility/SKSpriteNodeUtility.swift; sourceTree = "<group>"; };
+		C1EDE7E11E58E82000362F54 /* UserDefaultsUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsUtility.swift; path = Source/Utility/UserDefaultsUtility.swift; sourceTree = "<group>"; };
+		C1EDE7E91E58E8AF00362F54 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinate.swift; path = Models/Coordinate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +96,8 @@
 		C1A4CC891E58C6ED003D1869 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
+				C1EDE7DA1E58E7FA00362F54 /* Models */,
+				C1EDE7CB1E58E76C00362F54 /* Utility */,
 				C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */,
 				C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */,
 				C1A4CC901E58C6ED003D1869 /* GameScene.swift */,
@@ -98,6 +116,28 @@
 				C1A4CCA41E58C6ED003D1869 /* Info.plist */,
 			);
 			path = AtlasTests;
+			sourceTree = "<group>";
+		};
+		C1EDE7CB1E58E76C00362F54 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C1EDE7DB1E58E82000362F54 /* ACEaseUtility.swift */,
+				C1EDE7DC1E58E82000362F54 /* AngleUtility.swift */,
+				C1EDE7DD1E58E82000362F54 /* ColorUtility.swift */,
+				C1EDE7DE1E58E82000362F54 /* IntUtility.swift */,
+				C1EDE7DF1E58E82000362F54 /* RandomUtility.swift */,
+				C1EDE7E01E58E82000362F54 /* SKSpriteNodeUtility.swift */,
+				C1EDE7E11E58E82000362F54 /* UserDefaultsUtility.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		C1EDE7DA1E58E7FA00362F54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1EDE7E91E58E8AF00362F54 /* Coordinate.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +185,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Overmind;
 				TargetAttributes = {
 					C1A4CC861E58C6ED003D1869 = {
@@ -203,8 +243,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1EDE7E31E58E82000362F54 /* AngleUtility.swift in Sources */,
+				C1EDE7E71E58E82000362F54 /* SKSpriteNodeUtility.swift in Sources */,
+				C1EDE7E41E58E82000362F54 /* ColorUtility.swift in Sources */,
+				C1EDE7E61E58E82000362F54 /* RandomUtility.swift in Sources */,
+				C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */,
+				C1EDE7EA1E58E8AF00362F54 /* Coordinate.swift in Sources */,
+				C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */,
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
 				C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */,
+				C1EDE7E21E58E82000362F54 /* ACEaseUtility.swift in Sources */,
 				C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +305,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -306,6 +355,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -1,0 +1,27 @@
+//
+//  IntUtility.swift
+//  Atlas
+//
+//  Created by Martin Mumford on 11/5/15.
+//  Copyright © 2015 Runemark. All rights reserved.
+//
+
+import Foundation
+
+extension Int
+{
+    func even() -> Bool
+    {
+        return self % 2 == 0
+    }
+    
+    func odd() -> Bool
+    {
+        return !even()
+    }
+	
+	func inRange(_ range:(min:Int, max:Int)) -> Bool
+	{
+		return (self >= range.min && self <= range.max)
+	}
+}
