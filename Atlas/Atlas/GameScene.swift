@@ -28,6 +28,11 @@ class GameScene: SKScene, ActorDelegate
 	var writeThroughMap:AtomicMap<Int>
 	var archive:Archive
 	
+	//////////////////////////////////////////////////////////////////////////////////////////
+	// Agent
+	//////////////////////////////////////////////////////////////////////////////////////////
+	var agent:Agent?
+	
 	override init(size:CGSize)
 	{
 		window = size
@@ -62,14 +67,17 @@ class GameScene: SKScene, ActorDelegate
 		
 		//////////////////////////////
 		// INITIALIZE
+		//////////////////////////////
 		super.init(size:size)
+		//////////////////////////////
 		
 		self.addChild(mapView)
 	}
 
     override func didMove(to view: SKView)
 	{
-		
+		agent = Agent(delegate:self)
+		agent!.activate()
     }
     
     override func update(_ currentTime: TimeInterval)
