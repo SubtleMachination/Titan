@@ -21,7 +21,15 @@
 		C1EDE7E61E58E82000362F54 /* RandomUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7DF1E58E82000362F54 /* RandomUtility.swift */; };
 		C1EDE7E71E58E82000362F54 /* SKSpriteNodeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7E01E58E82000362F54 /* SKSpriteNodeUtility.swift */; };
 		C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7E11E58E82000362F54 /* UserDefaultsUtility.swift */; };
-		C1EDE7EA1E58E8AF00362F54 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7E91E58E8AF00362F54 /* Coordinate.swift */; };
+		C1EDE7EC1E58EA1600362F54 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7EB1E58EA1600362F54 /* Coordinate.swift */; };
+		C1EDE7F31E58EA6000362F54 /* bright_square.png in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7EF1E58EA6000362F54 /* bright_square.png */; };
+		C1EDE7F41E58EA6000362F54 /* dull_glow.png in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7F01E58EA6000362F54 /* dull_glow.png */; };
+		C1EDE7F51E58EA6000362F54 /* indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7F11E58EA6000362F54 /* indicator.png */; };
+		C1EDE7F61E58EA6000362F54 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7F21E58EA6000362F54 /* square.png */; };
+		C1EDE7FE1E58EA7400362F54 /* Crypt.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7F91E58EA7400362F54 /* Crypt.atlas */; };
+		C1EDE7FF1E58EA7400362F54 /* Crypt.tileset in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7FA1E58EA7400362F54 /* Crypt.tileset */; };
+		C1EDE8001E58EA7400362F54 /* Rust.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7FC1E58EA7400362F54 /* Rust.atlas */; };
+		C1EDE8011E58EA7400362F54 /* Rust.tileset in Resources */ = {isa = PBXBuildFile; fileRef = C1EDE7FD1E58EA7400362F54 /* Rust.tileset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +61,15 @@
 		C1EDE7DF1E58E82000362F54 /* RandomUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomUtility.swift; path = Source/Utility/RandomUtility.swift; sourceTree = "<group>"; };
 		C1EDE7E01E58E82000362F54 /* SKSpriteNodeUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SKSpriteNodeUtility.swift; path = Source/Utility/SKSpriteNodeUtility.swift; sourceTree = "<group>"; };
 		C1EDE7E11E58E82000362F54 /* UserDefaultsUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsUtility.swift; path = Source/Utility/UserDefaultsUtility.swift; sourceTree = "<group>"; };
-		C1EDE7E91E58E8AF00362F54 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinate.swift; path = Models/Coordinate.swift; sourceTree = "<group>"; };
+		C1EDE7EB1E58EA1600362F54 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinate.swift; path = Source/Models/Coordinate.swift; sourceTree = "<group>"; };
+		C1EDE7EF1E58EA6000362F54 /* bright_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bright_square.png; sourceTree = "<group>"; };
+		C1EDE7F01E58EA6000362F54 /* dull_glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dull_glow.png; sourceTree = "<group>"; };
+		C1EDE7F11E58EA6000362F54 /* indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indicator.png; sourceTree = "<group>"; };
+		C1EDE7F21E58EA6000362F54 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
+		C1EDE7F91E58EA7400362F54 /* Crypt.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Crypt.atlas; sourceTree = "<group>"; };
+		C1EDE7FA1E58EA7400362F54 /* Crypt.tileset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Crypt.tileset; sourceTree = "<group>"; };
+		C1EDE7FC1E58EA7400362F54 /* Rust.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Rust.atlas; sourceTree = "<group>"; };
+		C1EDE7FD1E58EA7400362F54 /* Rust.tileset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rust.tileset; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +112,7 @@
 		C1A4CC891E58C6ED003D1869 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
+				C1EDE7ED1E58EA5500362F54 /* Resources */,
 				C1EDE7DA1E58E7FA00362F54 /* Models */,
 				C1EDE7CB1E58E76C00362F54 /* Utility */,
 				C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */,
@@ -135,9 +152,56 @@
 		C1EDE7DA1E58E7FA00362F54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C1EDE7E91E58E8AF00362F54 /* Coordinate.swift */,
+				C1EDE7EB1E58EA1600362F54 /* Coordinate.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		C1EDE7ED1E58EA5500362F54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1EDE7F71E58EA7400362F54 /* Tilesets */,
+				C1EDE7EE1E58EA6000362F54 /* Common */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C1EDE7EE1E58EA6000362F54 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C1EDE7EF1E58EA6000362F54 /* bright_square.png */,
+				C1EDE7F01E58EA6000362F54 /* dull_glow.png */,
+				C1EDE7F11E58EA6000362F54 /* indicator.png */,
+				C1EDE7F21E58EA6000362F54 /* square.png */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C1EDE7F71E58EA7400362F54 /* Tilesets */ = {
+			isa = PBXGroup;
+			children = (
+				C1EDE7F81E58EA7400362F54 /* Crypt */,
+				C1EDE7FB1E58EA7400362F54 /* Rust */,
+			);
+			path = Tilesets;
+			sourceTree = "<group>";
+		};
+		C1EDE7F81E58EA7400362F54 /* Crypt */ = {
+			isa = PBXGroup;
+			children = (
+				C1EDE7F91E58EA7400362F54 /* Crypt.atlas */,
+				C1EDE7FA1E58EA7400362F54 /* Crypt.tileset */,
+			);
+			path = Crypt;
+			sourceTree = "<group>";
+		};
+		C1EDE7FB1E58EA7400362F54 /* Rust */ = {
+			isa = PBXGroup;
+			children = (
+				C1EDE7FC1E58EA7400362F54 /* Rust.atlas */,
+				C1EDE7FD1E58EA7400362F54 /* Rust.tileset */,
+			);
+			path = Rust;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +287,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1EDE7FE1E58EA7400362F54 /* Crypt.atlas in Resources */,
+				C1EDE7F31E58EA6000362F54 /* bright_square.png in Resources */,
 				C1A4CC8D1E58C6ED003D1869 /* GameScene.sks in Resources */,
+				C1EDE7F41E58EA6000362F54 /* dull_glow.png in Resources */,
+				C1EDE7F61E58EA6000362F54 /* square.png in Resources */,
+				C1EDE8001E58EA7400362F54 /* Rust.atlas in Resources */,
 				C1A4CC951E58C6ED003D1869 /* Assets.xcassets in Resources */,
 				C1A4CC981E58C6ED003D1869 /* Main.storyboard in Resources */,
+				C1EDE7F51E58EA6000362F54 /* indicator.png in Resources */,
+				C1EDE7FF1E58EA7400362F54 /* Crypt.tileset in Resources */,
+				C1EDE8011E58EA7400362F54 /* Rust.tileset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,12 +320,12 @@
 				C1EDE7E41E58E82000362F54 /* ColorUtility.swift in Sources */,
 				C1EDE7E61E58E82000362F54 /* RandomUtility.swift in Sources */,
 				C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */,
-				C1EDE7EA1E58E8AF00362F54 /* Coordinate.swift in Sources */,
 				C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */,
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
 				C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */,
 				C1EDE7E21E58E82000362F54 /* ACEaseUtility.swift in Sources */,
 				C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */,
+				C1EDE7EC1E58EA1600362F54 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
