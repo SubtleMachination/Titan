@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C18988E01E593C41000332E2 /* Design001.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18988DF1E593C41000332E2 /* Design001.swift */; };
 		C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */; };
 		C1A4CC8D1E58C6ED003D1869 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */; };
 		C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC901E58C6ED003D1869 /* GameScene.swift */; };
@@ -47,7 +48,6 @@
 		C1EDE8211E58FB2800362F54 /* ActorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */; };
 		C1EDE8241E58FE0A00362F54 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8231E58FE0A00362F54 /* Agent.swift */; };
 		C1EDE8291E5903C700362F54 /* PlaceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8281E5903C700362F54 /* PlaceTile.swift */; };
-		C1EDE82D1E5906EF00362F54 /* Design001.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE82C1E5906EF00362F54 /* Design001.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C18988DF1E593C41000332E2 /* Design001.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Design001.swift; path = Source/Agent/Actions/Design001.swift; sourceTree = "<group>"; };
 		C1A4CC871E58C6ED003D1869 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActorDelegate.swift; path = Source/Models/ActorDelegate.swift; sourceTree = "<group>"; };
 		C1EDE8231E58FE0A00362F54 /* Agent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Agent.swift; path = Source/Agent/Agent.swift; sourceTree = "<group>"; };
 		C1EDE8281E5903C700362F54 /* PlaceTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceTile.swift; path = Source/Agent/Actions/PlaceTile.swift; sourceTree = "<group>"; };
-		C1EDE82C1E5906EF00362F54 /* Design001.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Design001.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,7 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				C1EDE8281E5903C700362F54 /* PlaceTile.swift */,
-				C1EDE82C1E5906EF00362F54 /* Design001.swift */,
+				C18988DF1E593C41000332E2 /* Design001.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -414,8 +414,8 @@
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
 				C1EDE8081E58F08D00362F54 /* TileView.swift in Sources */,
 				C1EDE8191E58F4EE00362F54 /* ArchiveIO.swift in Sources */,
+				C18988E01E593C41000332E2 /* Design001.swift in Sources */,
 				C1EDE8141E58F4E400362F54 /* Archive.swift in Sources */,
-				C1EDE82D1E5906EF00362F54 /* Design001.swift in Sources */,
 				C1EDE8101E58F1A800362F54 /* Stack.swift in Sources */,
 				C1EDE8121E58F1D100362F54 /* TilesetData.swift in Sources */,
 				C1EDE8061E58F08D00362F54 /* ChangeIndicator.swift in Sources */,
