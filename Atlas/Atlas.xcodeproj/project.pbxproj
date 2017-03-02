@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C15591CB1E631EC4004F8F15 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15591CA1E631EC4004F8F15 /* Change.swift */; };
+		C17A6EB91E620E0E0078CFAE /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A6EB81E620E0E0078CFAE /* Shape.swift */; };
+		C17A6EBD1E62115A0078CFAE /* ApplyStyleToShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A6EBC1E62115A0078CFAE /* ApplyStyleToShape.swift */; };
 		C18988E01E593C41000332E2 /* Design001.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18988DF1E593C41000332E2 /* Design001.swift */; };
 		C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */; };
 		C1A4CC8D1E58C6ED003D1869 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */; };
@@ -61,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C15591CA1E631EC4004F8F15 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Change.swift; path = Source/Models/Change.swift; sourceTree = "<group>"; };
+		C17A6EB81E620E0E0078CFAE /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = Source/Models/Shape.swift; sourceTree = "<group>"; };
+		C17A6EBC1E62115A0078CFAE /* ApplyStyleToShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplyStyleToShape.swift; path = Source/Agent/Actions/ApplyStyleToShape.swift; sourceTree = "<group>"; };
 		C18988DF1E593C41000332E2 /* Design001.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Design001.swift; path = Source/Agent/Actions/Design001.swift; sourceTree = "<group>"; };
 		C1A4CC871E58C6ED003D1869 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,7 +197,6 @@
 		C1EDE7DA1E58E7FA00362F54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */,
 				C1EDE8131E58F4E400362F54 /* Archive.swift */,
 				C1EDE80B1E58F16100362F54 /* Tileset.swift */,
 				C1EDE8111E58F1D100362F54 /* TilesetData.swift */,
@@ -199,7 +204,9 @@
 				C1EDE81C1E58F50200362F54 /* AtomicMap.swift */,
 				C1EDE7EB1E58EA1600362F54 /* Coordinate.swift */,
 				C1EDE80D1E58F1A300362F54 /* ChangeQueue.swift */,
+				C15591CA1E631EC4004F8F15 /* Change.swift */,
 				C1EDE80F1E58F1A800362F54 /* Stack.swift */,
+				C17A6EB81E620E0E0078CFAE /* Shape.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -276,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				C1EDE8231E58FE0A00362F54 /* Agent.swift */,
+				C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */,
 				C1EDE8251E59038B00362F54 /* Actions */,
 			);
 			name = Agent;
@@ -286,6 +294,7 @@
 			children = (
 				C1EDE8281E5903C700362F54 /* PlaceTile.swift */,
 				C18988DF1E593C41000332E2 /* Design001.swift */,
+				C17A6EBC1E62115A0078CFAE /* ApplyStyleToShape.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -407,12 +416,14 @@
 				C1EDE7E41E58E82000362F54 /* ColorUtility.swift in Sources */,
 				C1EDE81F1E58F54500362F54 /* FileIO.swift in Sources */,
 				C1EDE8071E58F08D00362F54 /* TileMapView.swift in Sources */,
+				C17A6EB91E620E0E0078CFAE /* Shape.swift in Sources */,
 				C1EDE7E61E58E82000362F54 /* RandomUtility.swift in Sources */,
 				C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */,
 				C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */,
 				C1EDE81B1E58F4EE00362F54 /* TilesetIO.swift in Sources */,
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
 				C1EDE8081E58F08D00362F54 /* TileView.swift in Sources */,
+				C15591CB1E631EC4004F8F15 /* Change.swift in Sources */,
 				C1EDE8191E58F4EE00362F54 /* ArchiveIO.swift in Sources */,
 				C18988E01E593C41000332E2 /* Design001.swift in Sources */,
 				C1EDE8141E58F4E400362F54 /* Archive.swift in Sources */,
@@ -429,6 +440,7 @@
 				C1EDE81D1E58F50200362F54 /* AtomicMap.swift in Sources */,
 				C1EDE8291E5903C700362F54 /* PlaceTile.swift in Sources */,
 				C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */,
+				C17A6EBD1E62115A0078CFAE /* ApplyStyleToShape.swift in Sources */,
 				C1EDE7EC1E58EA1600362F54 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

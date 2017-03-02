@@ -11,7 +11,6 @@ import GameplayKit
 
 class GameScene: SKScene, ActorDelegate
 {
-    
 	////////////////////////////////////////////////////////////////////////////////////////
 	// View
 	////////////////////////////////////////////////////////////////////////////////////////
@@ -27,6 +26,10 @@ class GameScene: SKScene, ActorDelegate
 	var map:TileMap
 	var writeThroughMap:AtomicMap<Int>
 	var archive:Archive
+	
+	var cursor:DiscreteTileCoord
+	var cursorState:CursorState
+	var cursorBrush:Int
 	
 	//////////////////////////////////////////////////////////////////////////////////////////
 	// Agent
@@ -65,6 +68,10 @@ class GameScene: SKScene, ActorDelegate
 		archive = Archive()
 		archive.name = "TESTING"
 		
+		cursor = DiscreteTileCoord(x:0, y:0)
+		cursorBrush = 0
+		cursorState = CursorState.UP
+		
 		//////////////////////////////
 		// INITIALIZE
 		//////////////////////////////
@@ -97,12 +104,41 @@ class GameScene: SKScene, ActorDelegate
 		// Instantly alter the literal map
 		writeThroughMap[coord] = tile
 		
-		let change = Change(coord:coord, layer:TileLayer.terrain, value:tile, collaboratorUUID:"Internal")
+		let change = MapChange(changeType:ChangeType.MAP_CHANGE, collaboratorUUID:"Internal", coord:coord, layer:TileLayer.terrain, value:tile)
 		
 		// Archive the change
 		archive.registerChange(change)
 		// Queue up the change to the view's map
 		map.registerChange(change)
+	}
+	
+	func changeCursorBrush(brush:Int)
+	{
+		cursorBrush = brush
+	}
+	
+	func changeCursorState(state:CursorState)
+	{
+		cursorState = state
+	}
+	
+	func moveCursor(direction:CursorDirection)
+	{
+		switch(direction)
+		{
+			case CursorDirection.UP:
+				break
+			case CursorDirection.DOWN:
+				break
+			case CursorDirection.LEFT:
+				break
+			case CursorDirection.RIGHT:
+				break
+		}
+	}
+	
+	func moveCursor(direction:String) {
+		
 	}
 	
 	func boardRange() -> TileRect

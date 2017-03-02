@@ -19,14 +19,17 @@ class Design001
 	
 	func trigger()
 	{
-		for x in 0..<32
+		// STAGE 1: Create a Shape
+		let shape = Shape()
+		
+		for x in 0..<25
 		{
-			for y in 0..<32
-			{
+			for y in 0..<25 {
 				let coord = DiscreteTileCoord(x:x, y:y)
-				PlaceTile(delegate:delegate, coord:coord, tile:1).trigger()
+				shape.addNode(coord)
 			}
-			
 		}
-	}
+		
+		// STAGE 2: Apply Pattern to the Shape
+		ApplyStyleToShape(delegate:delegate, shape:shape).trigger()	}
 }

@@ -9,14 +9,6 @@
 import Foundation
 import SpriteKit
 
-struct Change
-{
-    var coord:DiscreteTileCoord
-    var layer:TileLayer
-    var value:Int
-    var collaboratorUUID:String?
-}
-
 class ChangeQueue
 {
     var changes:Stack<Change>

@@ -8,9 +8,23 @@
 
 import Foundation
 
+enum CursorState
+{
+	case UP, DOWN
+}
+
+enum CursorDirection
+{
+	case UP, DOWN, LEFT, RIGHT
+}
+
 protocol ActorDelegate
 {
     // Mutation
+	func changeCursorState(state:CursorState)
+	func changeCursorBrush(brush:Int)
+	func moveCursor(direction:CursorDirection)
+	
     func placeTile(_ coord:DiscreteTileCoord, tile:Int)
     
     // Information
