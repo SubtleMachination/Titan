@@ -19,17 +19,20 @@ class Design001
 	
 	func trigger()
 	{
-		// STAGE 1: Create a Shape
-		let shape = Shape()
+//		let coord = DiscreteTileCoord(x:10, y:10)
+//		ATPlaceTile(delegate:delegate, coord:coord, value:1).execute()
 		
-		for x in 0..<25
-		{
-			for y in 0..<25 {
-				let coord = DiscreteTileCoord(x:x, y:y)
-				shape.addNode(coord)
-			}
-		}
+		let area = TileRect(left:1, right:20, up:20, down:1)
+		ATFillSquare(delegate:delegate, area:area, value:1).execute()
 		
-		// STAGE 2: Apply Pattern to the Shape
-		ApplyStyleToShape(delegate:delegate, shape:shape).trigger()	}
+//		var sequence = [TileAssignment]()
+//		for x in 1...25
+//		{
+//			let coord = DiscreteTileCoord(x:x, y:5)
+//			let assignment = TileAssignment(coord:coord, value:1)
+//			sequence.append(assignment)
+//		}
+//		
+//		ATPlaceTiles(delegate:delegate, sequence:sequence).execute()
+	}
 }

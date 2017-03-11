@@ -391,7 +391,7 @@ class TileMapView : SKNode, DirectMapObserver
             mapBounds = modelDelegate!.getBounds()
             cameraInWorld = TileCoord(x:Double(mapBounds.left + mapBounds.right + 1)/2.0, y:Double(mapBounds.down + mapBounds.up + 1)/2.0)
             
-            recalculateTileRect()
+            let _ = recalculateTileRect()
             completelyRedrawView()
         }
     }

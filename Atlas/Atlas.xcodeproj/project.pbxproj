@@ -51,6 +51,12 @@
 		C1EDE8211E58FB2800362F54 /* ActorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */; };
 		C1EDE8241E58FE0A00362F54 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8231E58FE0A00362F54 /* Agent.swift */; };
 		C1EDE8291E5903C700362F54 /* PlaceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8281E5903C700362F54 /* PlaceTile.swift */; };
+		C1FFBEF31E7354A0003109B7 /* FillSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBEF21E7354A0003109B7 /* FillSquare.swift */; };
+		C1FFBEF81E736277003109B7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBEF71E736277003109B7 /* Task.swift */; };
+		C1FFBF001E736634003109B7 /* ATFillSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBEFF1E736634003109B7 /* ATFillSquare.swift */; };
+		C1FFBF021E738298003109B7 /* ATPlaceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBF011E738298003109B7 /* ATPlaceTile.swift */; };
+		C1FFBF041E7385FC003109B7 /* ATPlaceTiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBF031E7385FC003109B7 /* ATPlaceTiles.swift */; };
+		C1FFBF071E738D67003109B7 /* TileAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBF061E738D67003109B7 /* TileAssignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +118,12 @@
 		C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActorDelegate.swift; path = Source/Models/ActorDelegate.swift; sourceTree = "<group>"; };
 		C1EDE8231E58FE0A00362F54 /* Agent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Agent.swift; path = Source/Agent/Agent.swift; sourceTree = "<group>"; };
 		C1EDE8281E5903C700362F54 /* PlaceTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceTile.swift; path = Source/Agent/Actions/PlaceTile.swift; sourceTree = "<group>"; };
+		C1FFBEF21E7354A0003109B7 /* FillSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillSquare.swift; sourceTree = "<group>"; };
+		C1FFBEF71E736277003109B7 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		C1FFBEFF1E736634003109B7 /* ATFillSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATFillSquare.swift; sourceTree = "<group>"; };
+		C1FFBF011E738298003109B7 /* ATPlaceTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATPlaceTile.swift; sourceTree = "<group>"; };
+		C1FFBF031E7385FC003109B7 /* ATPlaceTiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATPlaceTiles.swift; sourceTree = "<group>"; };
+		C1FFBF061E738D67003109B7 /* TileAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileAssignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,21 +294,43 @@
 		C1EDE8221E58FDF900362F54 /* Agent */ = {
 			isa = PBXGroup;
 			children = (
+				C1FFBF051E738D60003109B7 /* Data */,
+				C1FFBEF41E735DA3003109B7 /* Evaluations */,
 				C1EDE8231E58FE0A00362F54 /* Agent.swift */,
 				C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */,
-				C1EDE8251E59038B00362F54 /* Actions */,
+				C1EDE8251E59038B00362F54 /* Tasks */,
 			);
 			name = Agent;
 			sourceTree = "<group>";
 		};
-		C1EDE8251E59038B00362F54 /* Actions */ = {
+		C1EDE8251E59038B00362F54 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				C1FFBEF71E736277003109B7 /* Task.swift */,
 				C1EDE8281E5903C700362F54 /* PlaceTile.swift */,
 				C18988DF1E593C41000332E2 /* Design001.swift */,
 				C17A6EBC1E62115A0078CFAE /* ApplyStyleToShape.swift */,
+				C1FFBEF21E7354A0003109B7 /* FillSquare.swift */,
+				C1FFBEFF1E736634003109B7 /* ATFillSquare.swift */,
+				C1FFBF011E738298003109B7 /* ATPlaceTile.swift */,
+				C1FFBF031E7385FC003109B7 /* ATPlaceTiles.swift */,
 			);
-			name = Actions;
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		C1FFBEF41E735DA3003109B7 /* Evaluations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Evaluations;
+			sourceTree = "<group>";
+		};
+		C1FFBF051E738D60003109B7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C1FFBF061E738D67003109B7 /* TileAssignment.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,11 +445,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1EDE7E31E58E82000362F54 /* AngleUtility.swift in Sources */,
+				C1FFBEF31E7354A0003109B7 /* FillSquare.swift in Sources */,
 				C1EDE7E71E58E82000362F54 /* SKSpriteNodeUtility.swift in Sources */,
 				C1EDE80C1E58F16100362F54 /* Tileset.swift in Sources */,
+				C1FFBF021E738298003109B7 /* ATPlaceTile.swift in Sources */,
 				C1EDE7E41E58E82000362F54 /* ColorUtility.swift in Sources */,
 				C1EDE81F1E58F54500362F54 /* FileIO.swift in Sources */,
 				C1EDE8071E58F08D00362F54 /* TileMapView.swift in Sources */,
+				C1FFBF071E738D67003109B7 /* TileAssignment.swift in Sources */,
 				C17A6EB91E620E0E0078CFAE /* Shape.swift in Sources */,
 				C1EDE7E61E58E82000362F54 /* RandomUtility.swift in Sources */,
 				C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */,
@@ -423,12 +460,14 @@
 				C1EDE81B1E58F4EE00362F54 /* TilesetIO.swift in Sources */,
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
 				C1EDE8081E58F08D00362F54 /* TileView.swift in Sources */,
+				C1FFBF001E736634003109B7 /* ATFillSquare.swift in Sources */,
 				C15591CB1E631EC4004F8F15 /* Change.swift in Sources */,
 				C1EDE8191E58F4EE00362F54 /* ArchiveIO.swift in Sources */,
 				C18988E01E593C41000332E2 /* Design001.swift in Sources */,
 				C1EDE8141E58F4E400362F54 /* Archive.swift in Sources */,
 				C1EDE8101E58F1A800362F54 /* Stack.swift in Sources */,
 				C1EDE8121E58F1D100362F54 /* TilesetData.swift in Sources */,
+				C1FFBF041E7385FC003109B7 /* ATPlaceTiles.swift in Sources */,
 				C1EDE8061E58F08D00362F54 /* ChangeIndicator.swift in Sources */,
 				C1EDE80E1E58F1A300362F54 /* ChangeQueue.swift in Sources */,
 				C1EDE80A1E58F14900362F54 /* TileMap.swift in Sources */,
@@ -441,6 +480,7 @@
 				C1EDE8291E5903C700362F54 /* PlaceTile.swift in Sources */,
 				C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */,
 				C17A6EBD1E62115A0078CFAE /* ApplyStyleToShape.swift in Sources */,
+				C1FFBEF81E736277003109B7 /* Task.swift in Sources */,
 				C1EDE7EC1E58EA1600362F54 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

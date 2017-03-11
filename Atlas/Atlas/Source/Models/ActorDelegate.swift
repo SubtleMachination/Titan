@@ -20,11 +20,7 @@ enum CursorDirection
 
 protocol ActorDelegate
 {
-    // Mutation
-	func changeCursorState(state:CursorState)
-	func changeCursorBrush(brush:Int)
-	func moveCursor(direction:CursorDirection)
-	
+    // Mutation	
     func placeTile(_ coord:DiscreteTileCoord, tile:Int)
     
     // Information

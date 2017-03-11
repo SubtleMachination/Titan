@@ -104,41 +104,12 @@ class GameScene: SKScene, ActorDelegate
 		// Instantly alter the literal map
 		writeThroughMap[coord] = tile
 		
-		let change = MapChange(changeType:ChangeType.MAP_CHANGE, collaboratorUUID:"Internal", coord:coord, layer:TileLayer.terrain, value:tile)
+		let change = Change(coord:coord, layer:TileLayer.terrain, value:tile, collaboratorUUID:"Internal")
 		
 		// Archive the change
 		archive.registerChange(change)
 		// Queue up the change to the view's map
 		map.registerChange(change)
-	}
-	
-	func changeCursorBrush(brush:Int)
-	{
-		cursorBrush = brush
-	}
-	
-	func changeCursorState(state:CursorState)
-	{
-		cursorState = state
-	}
-	
-	func moveCursor(direction:CursorDirection)
-	{
-		switch(direction)
-		{
-			case CursorDirection.UP:
-				break
-			case CursorDirection.DOWN:
-				break
-			case CursorDirection.LEFT:
-				break
-			case CursorDirection.RIGHT:
-				break
-		}
-	}
-	
-	func moveCursor(direction:String) {
-		
 	}
 	
 	func boardRange() -> TileRect
