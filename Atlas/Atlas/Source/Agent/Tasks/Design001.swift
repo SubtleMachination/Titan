@@ -22,8 +22,25 @@ class Design001
 //		let coord = DiscreteTileCoord(x:10, y:10)
 //		ATPlaceTile(delegate:delegate, coord:coord, value:1).execute()
 		
-		let area = TileRect(left:1, right:20, up:20, down:1)
-		ATFillSquare(delegate:delegate, area:area, value:1).execute()
+		let area = TileRect(left:1, right:25, up:25, down:1)
+		
+//		var test = Set<DiscreteTileCoord>()
+//		for x in 0...30
+//		{
+//			for y in 0...30
+//			{
+//				let coord = DiscreteTileCoord(x:x, y:y)
+//				if (coinFlip() || coinFlip() || coinFlip())
+//				{
+//					test.insert(coord)
+//				}
+//			}
+//		}
+		
+		
+//		ATFillSquare(delegate:delegate, area:area, value:1).execute()
+//		ATFillArea(delegate:delegate, area:test, value:1).execute()
+		ATFillArea(delegate:delegate, area:area.allCoords(), value:1).execute()
 		
 //		var sequence = [TileAssignment]()
 //		for x in 1...25

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C13E2B071E7E366A00B554C6 /* ATFillArea2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13E2B061E7E366A00B554C6 /* ATFillArea2.swift */; };
 		C15591CB1E631EC4004F8F15 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15591CA1E631EC4004F8F15 /* Change.swift */; };
 		C17A6EB91E620E0E0078CFAE /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A6EB81E620E0E0078CFAE /* Shape.swift */; };
 		C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */; };
@@ -48,8 +49,8 @@
 		C1EDE81F1E58F54500362F54 /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE81E1E58F54500362F54 /* FileIO.swift */; };
 		C1EDE8211E58FB2800362F54 /* ActorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */; };
 		C1EDE8241E58FE0A00362F54 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE8231E58FE0A00362F54 /* Agent.swift */; };
+		C1F806221E7DD261003ED977 /* ATFillArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F806211E7DD261003ED977 /* ATFillArea.swift */; };
 		C1FFBF0C1E73A3C3003109B7 /* Design001.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBF091E73A3C3003109B7 /* Design001.swift */; };
-		C1FFBF111E73A3EA003109B7 /* ATFillSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBF0E1E73A3EA003109B7 /* ATFillSquare.swift */; };
 		C1FFBF121E73A3EA003109B7 /* ATPlaceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBF0F1E73A3EA003109B7 /* ATPlaceTile.swift */; };
 		C1FFBF131E73A3EA003109B7 /* ATPlaceTiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBF101E73A3EA003109B7 /* ATPlaceTiles.swift */; };
 		C1FFBF151E73A410003109B7 /* TileAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFBF141E73A410003109B7 /* TileAssignment.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C13E2B061E7E366A00B554C6 /* ATFillArea2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATFillArea2.swift; sourceTree = "<group>"; };
 		C15591CA1E631EC4004F8F15 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Change.swift; path = Source/Models/Change.swift; sourceTree = "<group>"; };
 		C17A6EB81E620E0E0078CFAE /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = Source/Models/Shape.swift; sourceTree = "<group>"; };
 		C1A4CC871E58C6ED003D1869 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,8 +114,8 @@
 		C1EDE81E1E58F54500362F54 /* FileIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileIO.swift; path = Source/IO/FileIO.swift; sourceTree = "<group>"; };
 		C1EDE8201E58FB2800362F54 /* ActorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActorDelegate.swift; path = Source/Models/ActorDelegate.swift; sourceTree = "<group>"; };
 		C1EDE8231E58FE0A00362F54 /* Agent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Agent.swift; path = Source/Agent/Agent.swift; sourceTree = "<group>"; };
+		C1F806211E7DD261003ED977 /* ATFillArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATFillArea.swift; sourceTree = "<group>"; };
 		C1FFBF091E73A3C3003109B7 /* Design001.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Design001.swift; path = Source/Agent/Tasks/Design001.swift; sourceTree = "<group>"; };
-		C1FFBF0E1E73A3EA003109B7 /* ATFillSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ATFillSquare.swift; path = Source/Agent/Tasks/ATFillSquare.swift; sourceTree = "<group>"; };
 		C1FFBF0F1E73A3EA003109B7 /* ATPlaceTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ATPlaceTile.swift; path = Source/Agent/Tasks/ATPlaceTile.swift; sourceTree = "<group>"; };
 		C1FFBF101E73A3EA003109B7 /* ATPlaceTiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ATPlaceTiles.swift; path = Source/Agent/Tasks/ATPlaceTiles.swift; sourceTree = "<group>"; };
 		C1FFBF141E73A410003109B7 /* TileAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileAssignment.swift; path = Source/Agent/Data/TileAssignment.swift; sourceTree = "<group>"; };
@@ -302,7 +304,8 @@
 			children = (
 				C1FFBF161E73A41E003109B7 /* Task.swift */,
 				C1FFBF091E73A3C3003109B7 /* Design001.swift */,
-				C1FFBF0E1E73A3EA003109B7 /* ATFillSquare.swift */,
+				C1F806211E7DD261003ED977 /* ATFillArea.swift */,
+				C13E2B061E7E366A00B554C6 /* ATFillArea2.swift */,
 				C1FFBF0F1E73A3EA003109B7 /* ATPlaceTile.swift */,
 				C1FFBF101E73A3EA003109B7 /* ATPlaceTiles.swift */,
 			);
@@ -446,6 +449,7 @@
 				C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */,
 				C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */,
 				C1FFBF0C1E73A3C3003109B7 /* Design001.swift in Sources */,
+				C13E2B071E7E366A00B554C6 /* ATFillArea2.swift in Sources */,
 				C1EDE81B1E58F4EE00362F54 /* TilesetIO.swift in Sources */,
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
 				C1EDE8081E58F08D00362F54 /* TileView.swift in Sources */,
@@ -464,10 +468,10 @@
 				C1EDE81A1E58F4EE00362F54 /* TileMapIO.swift in Sources */,
 				C1EDE8241E58FE0A00362F54 /* Agent.swift in Sources */,
 				C1EDE7E21E58E82000362F54 /* ACEaseUtility.swift in Sources */,
-				C1FFBF111E73A3EA003109B7 /* ATFillSquare.swift in Sources */,
 				C1EDE8211E58FB2800362F54 /* ActorDelegate.swift in Sources */,
 				C1EDE81D1E58F50200362F54 /* AtomicMap.swift in Sources */,
 				C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */,
+				C1F806221E7DD261003ED977 /* ATFillArea.swift in Sources */,
 				C1FFBF151E73A410003109B7 /* TileAssignment.swift in Sources */,
 				C1EDE7EC1E58EA1600362F54 /* Coordinate.swift in Sources */,
 			);

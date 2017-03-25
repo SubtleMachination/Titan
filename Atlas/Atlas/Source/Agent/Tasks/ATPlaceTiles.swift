@@ -11,28 +11,30 @@ import Foundation
 class ATPlaceTiles: Task
 {
 	var sequence:[TileAssignment]
-	var progressIndex:Int
 	
 	init(delegate:ActorDelegate, sequence:[TileAssignment])
 	{
 		self.sequence = sequence
-		self.progressIndex = 0
 		
 		super.init(delegate:delegate)
 	}
 	
-	override func evaluate() -> Double
+	convenience init(delegate:ActorDelegate, tileSequence:[DiscreteTileCoord], value:Int)
 	{
-		return Double(self.progressIndex) / Double(self.sequence.count)
+		var actionSequence = [TileAssignment]()
+		for element in tileSequence
+		{
+			actionSequence.append(TileAssignment(coord:element, value:value))
+		}
+		
+		self.init(delegate:delegate, sequence:actionSequence)
 	}
 	
-	override func decide() -> Task?
+	override func execute()
 	{
-		let nextAssignment = self.sequence[self.progressIndex]
-		let nextTask = ATPlaceTile(delegate:delegate, coord:nextAssignment.coord, value:nextAssignment.value)
-		
-		self.progressIndex += 1
-		
-		return nextTask
+		for element in sequence
+		{
+			delegate.placeTile(element.coord, tile:element.value)
+		}
 	}
 }

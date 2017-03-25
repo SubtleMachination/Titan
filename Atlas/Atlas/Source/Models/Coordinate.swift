@@ -9,6 +9,16 @@
 import Foundation
 import SpriteKit
 
+enum Direction
+{
+	case UP, DOWN, LEFT, RIGHT
+}
+
+enum Axis
+{
+	case HORIZONTAL, VERTICAL
+}
+
 struct TileCoord:Hashable
 {
     var x:Double
@@ -140,6 +150,11 @@ struct DiscreteTileCoord:Hashable
         let abs_y = abs(other.y - y)
         return max(abs_x, abs_y)
     }
+	
+	func debug() -> String
+	{
+		return "(\(x), \(y))"
+	}
     
     var hashValue:Int
     {
@@ -502,7 +517,6 @@ func tileDeltaForScreenDelta(_ delta:CGPoint, tileSize:CGSize) -> TileCoord
     let tileDelta_y = Double(delta.y / tileSize.height)
     return TileCoord(x:tileDelta_x, y:tileDelta_y)
 }
-
 
 extension CGPoint
 {
