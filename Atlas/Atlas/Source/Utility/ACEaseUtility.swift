@@ -384,17 +384,17 @@ func curveQuinticEaseInOut(_ p:CGFloat) -> CGFloat
 
 func curveSineEaseIn(_ p:CGFloat) -> CGFloat
 {
-    return sin((p - 1) * CGFloat(M_PI_2)) + 1
+    return sin((p - 1) * CGFloat(Double.pi / 2.0)) + 1
 }
 
 func curveSineEaseOut(_ p:CGFloat) -> CGFloat
 {
-    return sin(p * CGFloat(M_PI_2))
+    return sin(p * CGFloat(Double.pi / 2.0))
 }
 
 func curveSineEaseInOut(_ p:CGFloat) -> CGFloat
 {
-    return 0.5 * (1 - cos(p * CGFloat(M_PI)))
+    return 0.5 * (1 - cos(p * CGFloat(Double.pi / 2.0)))
 }
 
 func curveCircularEaseIn(_ p:CGFloat) -> CGFloat
@@ -455,13 +455,13 @@ func curveExponentialEaseInOut(_ p:CGFloat) -> CGFloat
 // y = sin(13pi/2*x)*pow(2, 10 * (x - 1))
 func curveElasticEaseIn(_ p:CGFloat) -> CGFloat
 {
-    return sin(13 * CGFloat(M_PI_2) * p) * pow(2, 10 * (p - 1))
+    return sin(13 * CGFloat(Double.pi / 2.0) * p) * pow(2, 10 * (p - 1))
 }
 
 // y = sin(-13pi/2*(x + 1))*pow(2, -10x) + 1
 func curveElasticEaseOut(_ p:CGFloat) -> CGFloat
 {
-    return sin(-13 * CGFloat(M_PI_2) * (p + 1)) * pow(2, -10 * p) + 1
+    return sin(-13 * CGFloat(Double.pi / 2.0) * (p + 1)) * pow(2, -10 * p) + 1
 }
 
 // y = (1/2)*sin(13pi/2*(2*x))*pow(2, 10 * ((2*x) - 1))      | [0,0.5)
@@ -470,25 +470,25 @@ func curveElasticEaseInOut(_ p:CGFloat) -> CGFloat
 {
     if (p < 0.5)
     {
-        return 0.5 * sin(13 * CGFloat(M_PI_2) * (2 * p)) * pow(2, 10 * ((2 * p) - 1))
+        return 0.5 * sin(13 * CGFloat(Double.pi / 2.0) * (2 * p)) * pow(2, 10 * ((2 * p) - 1))
     }
     else
     {
-        return 0.5 * (sin(-13 * CGFloat(M_PI_2) * ((2 * p - 1) + 1)) * pow(2, -10 * (2 * p - 1)) + 2)
+        return 0.5 * (sin(-13 * CGFloat(Double.pi / 2.0) * ((2 * p - 1) + 1)) * pow(2, -10 * (2 * p - 1)) + 2)
     }
 }
 
 // y = x^3-x*sin(x*pi)
 func curveBackEaseIn(_ p:CGFloat) -> CGFloat
 {
-    return p * p * p - p * sin(p * CGFloat(M_PI))
+    return p * p * p - p * sin(p * CGFloat(Double.pi))
 }
 
 // y = 1-((1-x)^3-(1-x)*sin((1-x)*pi))
 func curveBackEaseOut(_ p:CGFloat) -> CGFloat
 {
     let f = 1 - p
-    return 1 - (f * f * f - f * sin(f * CGFloat(M_PI)))
+    return 1 - (f * f * f - f * sin(f * CGFloat(Double.pi)))
 }
 
 // y = (1/2)*((2x)^3-(2x)*sin(2*x*pi))           | [0, 0.5)
@@ -498,12 +498,12 @@ func curveBackEaseInOut(_ p:CGFloat) -> CGFloat
     if (p < 0.5)
     {
         let f = 2 * p
-        return 0.5 * (f * f * f - f * sin(f * CGFloat(M_PI)))
+        return 0.5 * (f * f * f - f * sin(f * CGFloat(Double.pi)))
     }
     else
     {
         let f = (1 - (2 * p - 1))
-        let sinePortion = sin(f * CGFloat(M_PI))
+        let sinePortion = sin(f * CGFloat(Double.pi))
         return 0.5 * (1 - (f * f * f - f * sinePortion)) + 0.5
     }
 }

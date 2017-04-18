@@ -16,7 +16,7 @@ func coinFlip() -> Bool
 // Returns with a (trueProb) probability of returning true, and a (1-trueProb) probability of returning false
 func weightedCoinFlip(_ trueProb:Double) -> Bool
 {
-    return (trueProb > randNormalDouble())
+	return (trueProb > randNormalDouble())
 }
 
 // Returns a random int between the specified ranges (inclusive)

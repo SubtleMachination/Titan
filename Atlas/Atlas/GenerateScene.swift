@@ -1,5 +1,5 @@
 //
-//  GameScene.swift
+//  GenerateScene.swift
 //  Atlas
 //
 //  Created by Dusty Artifact on 2/18/17.
@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene, ActorDelegate
+class GenerateScene: SKScene, ActorDelegate
 {
 	////////////////////////////////////////////////////////////////////////////////////////
 	// View
@@ -90,7 +90,7 @@ class GameScene: SKScene, ActorDelegate
     override func update(_ currentTime: TimeInterval)
 	{
 		// changes per cycle
-		for _ in 0...1
+		for _ in 0...0
 		{
 			_ = map.applyNextChange()
 		}

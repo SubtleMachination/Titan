@@ -13,6 +13,7 @@ class TileMapView : SKNode, DirectMapObserver
 {
     //////////////////////////////////////////////////////////////////////////////////////////
     // View
+	var borderTileLayer:SKNode
     var baseTileLayer:SKNode
     var stackedTileLayer:SKNode
     var heightTileLayer:SKNode
@@ -23,22 +24,8 @@ class TileMapView : SKNode, DirectMapObserver
     
     var cameraOnScreen:CGPoint
     var tileViewRect:TileRect?
-    //////////////////////////////////////////////////////////////////////////////////////////
-    
-    //////////////////////////////////////////////////////////////////////////////////////////
-    // SHAPE DENSITY LAYER
-    var shapeDensityLayer:SKNode
-    //////////////////////////////////////////////////////////////////////////////////////////
-    
-    //////////////////////////////////////////////////////////////////////////////////////////
-    // FLOW LAYER
-    var flowNodeLayer:SKNode
-    var flowLineLayer:SKNode
-    //////////////////////////////////////////////////////////////////////////////////////////
-    
-    //////////////////////////////////////////////////////////////////////////////////////////
-    // LAYOUT LAYER
-    var componentLayoutLayer:SKNode
+	
+	var commonAtlas:SKTextureAtlas
     //////////////////////////////////////////////////////////////////////////////////////////
     
     //////////////////////////////////////////////////////////////////////////////////////////
@@ -46,17 +33,18 @@ class TileMapView : SKNode, DirectMapObserver
     var tileset:Tileset?
     var modelDelegate:DirectModelDelegate?
     var mapBounds:TileRect
+	var mapExtraBounds:TileRect
     var cameraInWorld:TileCoord
     //////////////////////////////////////////////////////////////////////////////////////////
     
     //////////////////////////////////////////////////////////////////////////////////////////
     // View Model
+	var registeredBorderTiles:[DiscreteTileCoord:TileView]
     var registeredBaseTiles:[DiscreteTileCoord:TileView]
     var registeredStackedTiles:[DiscreteTileCoord:TileView]
     var registeredHeightTiles:[DiscreteTileCoord:TileView]
     var registeredChangeIndicators:[DiscreteTileCoord:ChangeIndicator]
-    
-    var registeredDensityNodes:[DiscreteTileCoord:SKSpriteNode]
+	
     //////////////////////////////////////////////////////////////////////////////////////////
     
     init(window:CGSize, viewSize:CGSize, tileSize:CGSize)
@@ -66,6 +54,9 @@ class TileMapView : SKNode, DirectMapObserver
         
         cameraInWorld = TileCoord(x:0.0, y:0.0)
         cameraOnScreen = CGPoint.zero
+		
+		borderTileLayer = SKNode()
+		borderTileLayer.position = CGPoint.zero
         
         baseTileLayer = SKNode()
         baseTileLayer.position = CGPoint.zero
@@ -78,33 +69,25 @@ class TileMapView : SKNode, DirectMapObserver
         
         changeIndicatorLayer = SKNode()
         changeIndicatorLayer.position = CGPoint.zero
-        
-        shapeDensityLayer = SKNode()
-        shapeDensityLayer.position = CGPoint.zero
-        
-        flowNodeLayer = SKNode()
-        flowLineLayer = SKNode()
-        
-        componentLayoutLayer = SKNode()
-        
+		
+		registeredBorderTiles = [DiscreteTileCoord:TileView]()
         registeredBaseTiles = [DiscreteTileCoord:TileView]()
         registeredStackedTiles = [DiscreteTileCoord:TileView]()
         registeredHeightTiles = [DiscreteTileCoord:TileView]()
         registeredChangeIndicators = [DiscreteTileCoord:ChangeIndicator]()
-        registeredDensityNodes = [DiscreteTileCoord:SKSpriteNode]()
         
         mapBounds = TileRect(left:0, right:0, up:0, down:0)
+		mapExtraBounds = TileRect(left:0, right:0, up:0, down:0)
+		
+		commonAtlas = SKTextureAtlas(named:"Common")
         
         super.init()
-        
+		
+		self.addChild(borderTileLayer)
         self.addChild(baseTileLayer)
         self.addChild(stackedTileLayer)
         self.addChild(heightTileLayer)
         self.addChild(changeIndicatorLayer)
-        self.addChild(shapeDensityLayer)
-        self.addChild(flowLineLayer)
-        self.addChild(flowNodeLayer)
-        self.addChild(componentLayoutLayer)
         
         // Equivalent of a 4x view (where a 3x is the maximum zoom)
         let boundWidth = (window.width - viewBoundSize.width)/2.0
@@ -143,6 +126,20 @@ class TileMapView : SKNode, DirectMapObserver
     //////////////////////////////////////////////////////////////////////////////////////////
     // Tile Translation
     //////////////////////////////////////////////////////////////////////////////////////////
+	
+	func translateViewByTileDelta(_ tileDelta:DiscreteTileCoord)
+	{
+		let tileCameraDelta = DiscreteTileCoord(x:-1*tileDelta.x, y:-1*tileDelta.y).makePrecise()
+		let screenDelta = screenDeltaForTileDelta(tileDelta.makePrecise(), tileSize:tileSize)
+		cameraInWorld += tileCameraDelta
+		
+		repositionTilesInView(screenDelta)
+		let rectInfo = recalculateTileRect()
+		if (rectInfo.updateNeeded)
+		{
+			updateTilesInView(rectInfo.oldRect)
+		}
+	}
     
     func translateView(_ screenDelta:CGPoint)
     {
@@ -186,7 +183,29 @@ class TileMapView : SKNode, DirectMapObserver
         indicator.removeFromParent()
         registeredChangeIndicators.removeValue(forKey: coord)
     }
-    
+	
+	//////////////////////////////////////////////////////////////////////////////////////////
+	// Border Tiles
+	//////////////////////////////////////////////////////////////////////////////////////////
+	
+	func addBorderTileAt(_ coord:DiscreteTileCoord)
+	{
+		let texture = commonAtlas.textureNamed("border")
+		let tileView = createTileViewWithTexture(texture, coord:coord)
+		borderTileLayer.addChild(tileView)
+		
+		registeredBorderTiles[coord] = tileView
+	}
+	
+	func removeBorderTileViewAt(_ coord:DiscreteTileCoord)
+	{
+		if let tileView = registeredBorderTiles[coord]
+		{
+			tileView.removeFromParent()
+			registeredBorderTiles.removeValue(forKey: coord)
+		}
+	}
+	
     //////////////////////////////////////////////////////////////////////////////////////////
     // Tile Drawing/Updating
     //////////////////////////////////////////////////////////////////////////////////////////
@@ -273,6 +292,7 @@ class TileMapView : SKNode, DirectMapObserver
     
     func removeTileViewsAt(_ coord:DiscreteTileCoord)
     {
+		removeBorderTileViewAt(coord)
         removeBaseTileViewAt(coord)
         removeStackedTileViewAt(coord)
         removeHeightTileViewAt(coord)
@@ -306,81 +326,6 @@ class TileMapView : SKNode, DirectMapObserver
     }
     
     //////////////////////////////////////////////////////////////////////////////////////////
-    // Density Methods
-    //////////////////////////////////////////////////////////////////////////////////////////
-    
-    func addDensityNodeAt(_ coord:DiscreteTileCoord, density:Int)
-    {
-        if (density > 0)
-        {
-            let node = SKSpriteNode(imageNamed:"square.png")
-            node.resizeNode(tileSize.width/CGFloat(5), y:tileSize.height/CGFloat(5))
-            let alpha = CGFloat(Double(density) * 0.1)
-            
-            node.position = screenPosForTileViewAtCoord(coord, cameraInWorld:cameraInWorld, cameraOnScreen:cameraOnScreen, tileSize:tileSize)
-            
-            let fadeAction = fadeTo(0.0, finish:alpha, duration:0.4, type:CurveType.quadratic_OUT)
-            node.run(fadeAction)
-            
-            let growAction = scaleToSize(node, size:tileSize, duration:0.4, type:CurveType.quadratic_INOUT)
-            node.run(growAction)
-            
-            shapeDensityLayer.addChild(node)
-            registeredDensityNodes[coord] = node
-        }
-    }
-    
-    func updateDensityNodeAt(_ coord:DiscreteTileCoord, density:Int)
-    {
-        if (density > 0)
-        {
-            if let existingNode = registeredDensityNodes[coord]
-            {
-                existingNode.removeAllActions()
-                
-                let growAction = scaleToSize(existingNode, size:tileSize*Double(density), duration:0.4, type:CurveType.quadratic_INOUT)
-                existingNode.run(growAction)
-                
-                let fadeAction = fadeTo(existingNode, alpha:CGFloat(density)*CGFloat(0.1), duration:0.4, type:CurveType.quadratic_INOUT)
-                existingNode.run(fadeAction)
-            }
-            else
-            {
-                addDensityNodeAt(coord, density:density)
-            }
-        }
-        else
-        {
-            removeDensityNodeAt(coord)
-        }
-    }
-    
-    func removeDensityNodeAt(_ coord:DiscreteTileCoord)
-    {
-        if let shapeNode = registeredDensityNodes[coord]
-        {
-            shapeNode.removeAllActions()
-            
-            let fadeAction = fadeTo(shapeNode, alpha:0.0, duration:0.4, type:CurveType.quadratic_OUT)
-            shapeNode.run(fadeAction)
-            
-            let growAction = scaleToSize(shapeNode, size:CGSize(width: 1, height: 1), duration:0.4, type:CurveType.quadratic_INOUT)
-            shapeNode.run(growAction, completion: { () -> Void in
-                shapeNode.removeFromParent()
-                self.registeredDensityNodes.removeValue(forKey: coord)
-            })
-        }
-    }
-    
-    func clearDensity()
-    {
-        for (coord, _) in registeredDensityNodes
-        {
-            removeDensityNodeAt(coord)
-        }
-    }
-    
-    //////////////////////////////////////////////////////////////////////////////////////////
     // View Drawing/Updating
     //////////////////////////////////////////////////////////////////////////////////////////
     
@@ -389,6 +334,7 @@ class TileMapView : SKNode, DirectMapObserver
         if let _ = modelDelegate
         {
             mapBounds = modelDelegate!.getBounds()
+			mapExtraBounds = mapBounds.expandBelow().expandLeft()
             cameraInWorld = TileCoord(x:Double(mapBounds.left + mapBounds.right + 1)/2.0, y:Double(mapBounds.down + mapBounds.up + 1)/2.0)
             
             let _ = recalculateTileRect()
@@ -429,6 +375,12 @@ class TileMapView : SKNode, DirectMapObserver
     
     func clearView()
     {
+		for (coord, tileSprite) in registeredBorderTiles
+		{
+			tileSprite.removeFromParent()
+			registeredBorderTiles.removeValue(forKey: coord)
+		}
+		
         for (coord, tileSprite) in registeredBaseTiles
         {
             tileSprite.removeFromParent()
@@ -450,6 +402,11 @@ class TileMapView : SKNode, DirectMapObserver
     
     func repositionTilesInView(_ screenDelta:CGPoint)
     {
+		for (_, tileSprite) in registeredBorderTiles
+		{
+			tileSprite.position += screenDelta
+		}
+		
         for (_, tileSprite) in registeredBaseTiles
         {
             tileSprite.position += screenDelta
@@ -632,6 +589,11 @@ class TileMapView : SKNode, DirectMapObserver
         {
             if let tileset = tileset
             {
+				if (mapExtraBounds.borderContains(coord))
+				{
+					addBorderTileAt(coord)
+				}
+				
                 let terrainUID = modelDelegate.terrainTileUIDAt(coord)
                 let belowTerrainUID = modelDelegate.terrainTileUIDAt(coordBelow)
                 let doodadUID = modelDelegate.doodadTileUIDAt(coord)
@@ -714,13 +676,22 @@ class TileMapView : SKNode, DirectMapObserver
             for y in tileViewRect!.down...tileViewRect!.up
             {
                 let coord = DiscreteTileCoord(x:x, y:y)
-                if (mapBounds.expandBelow().contains(coord))
+                if (mapExtraBounds.contains(coord))
                 {
                     redrawTileViewsAt(x, y:y)
                 }
             }
         }
     }
+	
+	func pointIsWithinView(loc:CGPoint) -> Bool
+	{
+		let right = viewBoundSize.width / 2.0
+		let left = -1.0 * right
+		let up = viewBoundSize.height / 2.0
+		let down = -1.0 * up
+		return (loc.x > left && loc.y > down && loc.x < right && loc.y < up)
+	}
     
     // Position relative to the MapView
     func tileAtLocation(_ location:CGPoint) -> DiscreteTileCoord?

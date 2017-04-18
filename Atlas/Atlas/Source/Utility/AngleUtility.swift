@@ -21,7 +21,7 @@ func angleBetweenPoints(_ p1:CGPoint, p2:CGPoint) -> Double
     let deltaX = Double(p2.x - p1.x)
     let deltaY = Double(p2.y - p1.y)
     
-    var angleInDegrees = atan2(deltaY, deltaX) * (180 / M_PI)
+    var angleInDegrees = atan2(deltaY, deltaX) * (180 / Double.pi)
     
     if (angleInDegrees < 0.0)
     {
@@ -65,10 +65,10 @@ func radialDelta(_ angleInRad:Double, radius:Double) -> CGPoint
 
 func degToRad(_ deg:Double) -> Double
 {
-    return deg * (M_PI / 180.0)
+    return deg * (Double.pi / 180.0)
 }
 
 func radToDeg(_ rad:Double) -> Double
 {
-    return rad * (180.0 / M_PI)
+    return rad * (180.0 / Double.pi)
 }

@@ -8,18 +8,17 @@
 
 import Foundation
 
-class ATFillArea2: Task
+class ATFillArea3: Task
 {
 	// Parameters
 	var area:Set<DiscreteTileCoord>
-	var value:Int
+	var values:[String:Int]
 	
-	init(delegate:ActorDelegate, area:Set<DiscreteTileCoord>, value:Int)
+	init(delegate:ActorDelegate, area:Set<DiscreteTileCoord>, values:[String:Int])
 	{
 		// Parameters
 		self.area = area
-		self.value = value
-		
+		self.values = values
 		super.init(delegate:delegate)
 	}
 	
@@ -29,9 +28,12 @@ class ATFillArea2: Task
 		
 		for coord in self.area
 		{
-			if delegate.tileValue(coord) != self.value
+			if let target_value = self.values[coord.debug()]
 			{
-				remainingArea.insert(coord)
+				if delegate.tileValue(coord) != target_value
+				{
+					remainingArea.insert(coord)
+				}
 			}
 		}
 		
@@ -95,7 +97,7 @@ class ATFillArea2: Task
 						for coord in sequence
 						{
 							remainingArea.remove(coord)
-							ATPlaceTile(delegate:delegate, coord:coord, value:self.value).execute()
+							ATPlaceTile(delegate:delegate, coord:coord, value:self.values[coord.debug()]!).execute()
 							cursor = coord
 						}
 					}
@@ -191,18 +193,18 @@ class ATFillArea2: Task
 		
 		switch (direction)
 		{
-			case Direction.UP:
-				nudgedCoord = coord.up()
-				break
-			case Direction.RIGHT:
-				nudgedCoord = coord.right()
-				break
-			case Direction.DOWN:
-				nudgedCoord = coord.down()
-				break
-			case Direction.LEFT:
-				nudgedCoord = coord.left()
-				break
+		case Direction.UP:
+			nudgedCoord = coord.up()
+			break
+		case Direction.RIGHT:
+			nudgedCoord = coord.right()
+			break
+		case Direction.DOWN:
+			nudgedCoord = coord.down()
+			break
+		case Direction.LEFT:
+			nudgedCoord = coord.left()
+			break
 		}
 		
 		return nudgedCoord
@@ -226,7 +228,7 @@ class ATFillArea2: Task
 			}
 		}
 		
-			// Check everything else, find the closest (brute-force)
+		// Check everything else, find the closest (brute-force)
 		var closestDistanceSoFar = 10000
 		var closestTile:DiscreteTileCoord?
 		

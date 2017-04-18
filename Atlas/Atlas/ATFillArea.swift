@@ -128,7 +128,7 @@ class ATFillArea: Task
 				sequence.append(tempCoord)
 			}
 				
-			tempCoord == nudgeInDirection(coord:tempCoord)
+			tempCoord = nudgeInDirection(coord:tempCoord)
 			if (remainingArea.contains(tempCoord))
 			{
 				sequence.append(tempCoord)

@@ -203,7 +203,7 @@ class TileMapIO
         
         return map
     }
-    
+	
     func exportModel(_ model:TileMap)
     {
         let modelString = modelToString(model)

@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C11EB3A71E9DB18800E2B599 /* TilePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EB3A61E9DB18800E2B599 /* TilePalette.swift */; };
 		C13E2B071E7E366A00B554C6 /* ATFillArea2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13E2B061E7E366A00B554C6 /* ATFillArea2.swift */; };
 		C15591CB1E631EC4004F8F15 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15591CA1E631EC4004F8F15 /* Change.swift */; };
+		C1742E9E1E993A0400F6596C /* EditorScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1742E9D1E993A0400F6596C /* EditorScene.swift */; };
 		C17A6EB91E620E0E0078CFAE /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A6EB81E620E0E0078CFAE /* Shape.swift */; };
+		C190C46A1E9B8E1900CF4447 /* NavigationPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C4691E9B8E1900CF4447 /* NavigationPane.swift */; };
+		C190C46E1E9B930A00CF4447 /* Common.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C190C46D1E9B930A00CF4447 /* Common.atlas */; };
 		C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */; };
-		C1A4CC8D1E58C6ED003D1869 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */; };
-		C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC901E58C6ED003D1869 /* GameScene.swift */; };
+		C1A4CC911E58C6ED003D1869 /* GenerateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC901E58C6ED003D1869 /* GenerateScene.swift */; };
 		C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC921E58C6ED003D1869 /* ViewController.swift */; };
 		C1A4CC951E58C6ED003D1869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC941E58C6ED003D1869 /* Assets.xcassets */; };
 		C1A4CC981E58C6ED003D1869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A4CC961E58C6ED003D1869 /* Main.storyboard */; };
 		C1A4CCA31E58C6ED003D1869 /* AtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CCA21E58C6ED003D1869 /* AtlasTests.swift */; };
+		C1BF4A821E998FA700AB8AE2 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF4A811E998FA700AB8AE2 /* SimpleButton.swift */; };
+		C1CF825D1E8D2FF30060450D /* ATFillArea3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF825C1E8D2FF30060450D /* ATFillArea3.swift */; };
 		C1EDE7E21E58E82000362F54 /* ACEaseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7DB1E58E82000362F54 /* ACEaseUtility.swift */; };
 		C1EDE7E31E58E82000362F54 /* AngleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7DC1E58E82000362F54 /* AngleUtility.swift */; };
 		C1EDE7E41E58E82000362F54 /* ColorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE7DD1E58E82000362F54 /* ColorUtility.swift */; };
@@ -68,13 +73,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C11EB3A61E9DB18800E2B599 /* TilePalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TilePalette.swift; sourceTree = "<group>"; };
 		C13E2B061E7E366A00B554C6 /* ATFillArea2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATFillArea2.swift; sourceTree = "<group>"; };
 		C15591CA1E631EC4004F8F15 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Change.swift; path = Source/Models/Change.swift; sourceTree = "<group>"; };
+		C1742E9D1E993A0400F6596C /* EditorScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorScene.swift; sourceTree = "<group>"; };
 		C17A6EB81E620E0E0078CFAE /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = Source/Models/Shape.swift; sourceTree = "<group>"; };
+		C190C4691E9B8E1900CF4447 /* NavigationPane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationPane.swift; sourceTree = "<group>"; };
+		C190C46D1E9B930A00CF4447 /* Common.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Common.atlas; sourceTree = "<group>"; };
 		C1A4CC871E58C6ED003D1869 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		C1A4CC901E58C6ED003D1869 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C1A4CC901E58C6ED003D1869 /* GenerateScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateScene.swift; sourceTree = "<group>"; };
 		C1A4CC921E58C6ED003D1869 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1A4CC941E58C6ED003D1869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1A4CC971E58C6ED003D1869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +90,8 @@
 		C1A4CC9E1E58C6ED003D1869 /* AtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A4CCA21E58C6ED003D1869 /* AtlasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasTests.swift; sourceTree = "<group>"; };
 		C1A4CCA41E58C6ED003D1869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1BF4A811E998FA700AB8AE2 /* SimpleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
+		C1CF825C1E8D2FF30060450D /* ATFillArea3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATFillArea3.swift; sourceTree = "<group>"; };
 		C1EDE7DB1E58E82000362F54 /* ACEaseUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ACEaseUtility.swift; path = Source/Utility/ACEaseUtility.swift; sourceTree = "<group>"; };
 		C1EDE7DC1E58E82000362F54 /* AngleUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AngleUtility.swift; path = Source/Utility/AngleUtility.swift; sourceTree = "<group>"; };
 		C1EDE7DD1E58E82000362F54 /* ColorUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorUtility.swift; path = Source/Utility/ColorUtility.swift; sourceTree = "<group>"; };
@@ -140,6 +150,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1742EA41E99713700F6596C /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		C190C46C1E9B928B00CF4447 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C190C46D1E9B930A00CF4447 /* Common.atlas */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		C1A4CC7E1E58C6ED003D1869 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +187,7 @@
 		C1A4CC891E58C6ED003D1869 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
+				C1742EA41E99713700F6596C /* Maps */,
 				C1EDE8221E58FDF900362F54 /* Agent */,
 				C1EDE8151E58F4E700362F54 /* IO */,
 				C1EDE8021E58F02800362F54 /* Views */,
@@ -169,8 +195,8 @@
 				C1EDE7DA1E58E7FA00362F54 /* Models */,
 				C1EDE7CB1E58E76C00362F54 /* Utility */,
 				C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */,
-				C1A4CC8C1E58C6ED003D1869 /* GameScene.sks */,
-				C1A4CC901E58C6ED003D1869 /* GameScene.swift */,
+				C1A4CC901E58C6ED003D1869 /* GenerateScene.swift */,
+				C1742E9D1E993A0400F6596C /* EditorScene.swift */,
 				C1A4CC921E58C6ED003D1869 /* ViewController.swift */,
 				C1A4CC941E58C6ED003D1869 /* Assets.xcassets */,
 				C1A4CC961E58C6ED003D1869 /* Main.storyboard */,
@@ -242,6 +268,7 @@
 		C1EDE7F71E58EA7400362F54 /* Tilesets */ = {
 			isa = PBXGroup;
 			children = (
+				C190C46C1E9B928B00CF4447 /* Common */,
 				C1EDE7F81E58EA7400362F54 /* Crypt */,
 				C1EDE7FB1E58EA7400362F54 /* Rust */,
 			);
@@ -272,6 +299,9 @@
 				C1EDE8031E58F08D00362F54 /* ChangeIndicator.swift */,
 				C1EDE8041E58F08D00362F54 /* TileMapView.swift */,
 				C1EDE8051E58F08D00362F54 /* TileView.swift */,
+				C1BF4A811E998FA700AB8AE2 /* SimpleButton.swift */,
+				C190C4691E9B8E1900CF4447 /* NavigationPane.swift */,
+				C11EB3A61E9DB18800E2B599 /* TilePalette.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -306,6 +336,7 @@
 				C1FFBF091E73A3C3003109B7 /* Design001.swift */,
 				C1F806211E7DD261003ED977 /* ATFillArea.swift */,
 				C13E2B061E7E366A00B554C6 /* ATFillArea2.swift */,
+				C1CF825C1E8D2FF30060450D /* ATFillArea3.swift */,
 				C1FFBF0F1E73A3EA003109B7 /* ATPlaceTile.swift */,
 				C1FFBF101E73A3EA003109B7 /* ATPlaceTiles.swift */,
 			);
@@ -412,11 +443,11 @@
 			files = (
 				C1EDE7FE1E58EA7400362F54 /* Crypt.atlas in Resources */,
 				C1EDE7F31E58EA6000362F54 /* bright_square.png in Resources */,
-				C1A4CC8D1E58C6ED003D1869 /* GameScene.sks in Resources */,
 				C1EDE7F41E58EA6000362F54 /* dull_glow.png in Resources */,
 				C1EDE7F61E58EA6000362F54 /* square.png in Resources */,
 				C1EDE8001E58EA7400362F54 /* Rust.atlas in Resources */,
 				C1A4CC951E58C6ED003D1869 /* Assets.xcassets in Resources */,
+				C190C46E1E9B930A00CF4447 /* Common.atlas in Resources */,
 				C1A4CC981E58C6ED003D1869 /* Main.storyboard in Resources */,
 				C1EDE7F51E58EA6000362F54 /* indicator.png in Resources */,
 				C1EDE7FF1E58EA7400362F54 /* Crypt.tileset in Resources */,
@@ -449,9 +480,11 @@
 				C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */,
 				C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */,
 				C1FFBF0C1E73A3C3003109B7 /* Design001.swift in Sources */,
+				C190C46A1E9B8E1900CF4447 /* NavigationPane.swift in Sources */,
 				C13E2B071E7E366A00B554C6 /* ATFillArea2.swift in Sources */,
 				C1EDE81B1E58F4EE00362F54 /* TilesetIO.swift in Sources */,
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
+				C1BF4A821E998FA700AB8AE2 /* SimpleButton.swift in Sources */,
 				C1EDE8081E58F08D00362F54 /* TileView.swift in Sources */,
 				C15591CB1E631EC4004F8F15 /* Change.swift in Sources */,
 				C1FFBF121E73A3EA003109B7 /* ATPlaceTile.swift in Sources */,
@@ -464,9 +497,12 @@
 				C1EDE8061E58F08D00362F54 /* ChangeIndicator.swift in Sources */,
 				C1EDE80E1E58F1A300362F54 /* ChangeQueue.swift in Sources */,
 				C1EDE80A1E58F14900362F54 /* TileMap.swift in Sources */,
-				C1A4CC911E58C6ED003D1869 /* GameScene.swift in Sources */,
+				C1A4CC911E58C6ED003D1869 /* GenerateScene.swift in Sources */,
 				C1EDE81A1E58F4EE00362F54 /* TileMapIO.swift in Sources */,
 				C1EDE8241E58FE0A00362F54 /* Agent.swift in Sources */,
+				C11EB3A71E9DB18800E2B599 /* TilePalette.swift in Sources */,
+				C1742E9E1E993A0400F6596C /* EditorScene.swift in Sources */,
+				C1CF825D1E8D2FF30060450D /* ATFillArea3.swift in Sources */,
 				C1EDE7E21E58E82000362F54 /* ACEaseUtility.swift in Sources */,
 				C1EDE8211E58FB2800362F54 /* ActorDelegate.swift in Sources */,
 				C1EDE81D1E58F50200362F54 /* AtomicMap.swift in Sources */,

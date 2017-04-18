@@ -22,34 +22,86 @@ class Design001
 //		let coord = DiscreteTileCoord(x:10, y:10)
 //		ATPlaceTile(delegate:delegate, coord:coord, value:1).execute()
 		
-		let area = TileRect(left:1, right:25, up:25, down:1)
+//		var region = Set<DiscreteTileCoord>()
+		let region = Shape()
 		
-//		var test = Set<DiscreteTileCoord>()
-//		for x in 0...30
-//		{
-//			for y in 0...30
-//			{
-//				let coord = DiscreteTileCoord(x:x, y:y)
-//				if (coinFlip() || coinFlip() || coinFlip())
-//				{
-//					test.insert(coord)
-//				}
-//			}
-//		}
+		var center = DiscreteTileCoord(x:16, y:16)
+		region.addNode(center)
 		
+		for _ in 0...9
+		{
+			if let nextCenter = region.ripple(0, rEnd:1).randomElement()
+			{
+				center = nextCenter
+				let random_radius = randIntBetween(2, stop:4)
+				for x in center.x-random_radius...center.x+random_radius
+				{
+					for y in center.y-random_radius...center.y+random_radius
+					{
+						let coord = DiscreteTileCoord(x:x, y:y)
+						if (delegate.boardRange().innerRect()!.contains(coord))
+						{
+							region.addNode(coord)
+						}
+					}
+				}
+			}
+		}
 		
-//		ATFillSquare(delegate:delegate, area:area, value:1).execute()
-//		ATFillArea(delegate:delegate, area:test, value:1).execute()
-		ATFillArea(delegate:delegate, area:area.allCoords(), value:1).execute()
+		ATFillArea2(delegate:delegate, area:region.shapeMass(), value:1).execute()
 		
-//		var sequence = [TileAssignment]()
-//		for x in 1...25
-//		{
-//			let coord = DiscreteTileCoord(x:x, y:5)
-//			let assignment = TileAssignment(coord:coord, value:1)
-//			sequence.append(assignment)
-//		}
-//		
-//		ATPlaceTiles(delegate:delegate, sequence:sequence).execute()
+		let border = region.ripple(1, rEnd:1)
+		
+		var values = [String:Int]()
+		for coord in border
+		{
+			let up = border.contains(coord.up())
+			let down = border.contains(coord.down())
+			let left = border.contains(coord.left())
+			let right = border.contains(coord.right())
+			
+			let directions = [up, down, left, right]
+			var total_border_directions = 0
+			for direction in directions
+			{
+				if (direction)
+				{
+					total_border_directions += 1
+				}
+			}
+			
+			var value = 5
+			if (total_border_directions == 2)
+			{
+				if (up && down)
+				{
+					value = 3
+				}
+				else if (left && right)
+				{
+					value = 4
+				}
+			}
+			
+			values[coord.debug()] = value
+		}
+
+		ATFillArea3(delegate:delegate, area:border, values:values).execute()
+		
+		let innerRegion = region.ripple(-1, rEnd:0)
+		
+		values.removeAll()
+		for coord in innerRegion
+		{
+			var value = 1
+			if ((coord.x + coord.y) % 2 == 0)
+			{
+				value = 2
+			}
+			
+			values[coord.debug()] = value
+		}
+		
+		ATFillArea3(delegate:delegate, area:innerRegion, values:values).execute()
 	}
 }
