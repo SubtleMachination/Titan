@@ -26,12 +26,13 @@ class FileIO
         var files = [String]()
         
         let docs = docsPath()
-        let intermediatePath = (pathFromDocs != nil) ? pathFromDocs! + "/" : ""
+        let intermediatePath = (pathFromDocs != nil) ? pathFromDocs! : ""
         let fullPath = "\(docs)/\(intermediatePath)"
         
         do
         {
             try files = fileManager.contentsOfDirectory(atPath: fullPath)
+			
         }
         catch let error as NSError
         {
@@ -110,7 +111,8 @@ class FileIO
     fileprivate func docsPath() -> String
     {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        return paths[0]
+		let url = paths[0] as String
+        return url
     }
     
     // Path from docs is the path from the root docs folder to the desired folder where the file is contained

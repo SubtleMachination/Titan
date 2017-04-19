@@ -16,6 +16,18 @@ class TileMapIO
     {
         fileIO = FileIO()
     }
+	
+	func importSimpleModel(_ modelName:String) -> TileMap?
+	{
+		var model:TileMap?
+		
+		if let stringContents = fileIO.importStringFromFileInDocs(modelName, fileExtension:"map", pathFromDocs:"Maps")
+		{
+			model = importModelFromDisk(stringContents, fileName:modelName)
+		}
+		
+		return model
+	}
     
     func importModel(_ modelName:String) -> TileMap?
     {
@@ -128,7 +140,48 @@ class TileMapIO
         
         return map
     }
-    
+	
+	func importModelFromDisk(_ fileContents:String, fileName:String) -> TileMap
+	{
+		var mapData = [DiscreteTileCoord:Int]()
+		var width = 0
+
+		let rows = fileContents.components(separatedBy:"\n")
+		let rowCount = rows.count
+		let height = rowCount-1
+		var currentRow = rowCount-1
+
+		for row in rows
+		{
+			let columns = row.components(separatedBy:"\t")
+			var currentCol = 0
+			if (width == 0)
+			{
+				width = columns.count-1
+			}
+			for cell in columns
+			{
+				if let value = Int(cell)
+				{
+					let coord = DiscreteTileCoord(x:currentCol, y:currentRow)
+					mapData[coord] = value
+					currentCol += 1
+				}
+			}
+			currentRow -= 1
+		}
+		
+
+		let model = TileMap(bounds:TileRect(left:0, right:width, up:height, down:0), title:fileName)
+		
+		for (coord, value) in mapData
+		{
+			model.directlySetTerrainTileAt(coord, uid:value)
+		}
+		
+		return model
+	}
+	
     func importMapFromFileContents(_ fileContents:String) -> AtomicMap<Int>?
     {
         var map:AtomicMap<Int>?
@@ -204,10 +257,46 @@ class TileMapIO
         return map
     }
 	
+	func exportModelToDisk(_ model:TileMap)
+	{
+		print("Exporting")
+		var modelString = ""
+		let bounds = model.getBounds()
+		let tileData = model.allTerrainData()
+		
+		for row in (bounds.down...bounds.up).reversed()
+		{
+			var rowString = ""
+			for col in bounds.left...bounds.right
+			{
+				let coord = DiscreteTileCoord(x:col, y:row)
+				var value = 0
+				if let _ = tileData[coord]
+				{
+					value = tileData[coord]!
+				}
+				let stringValue = String(value)
+				rowString += stringValue
+				if (col < bounds.right)
+				{
+					rowString += "\t"
+				}
+			}
+			
+			modelString.append(rowString)
+			if (row > bounds.down)
+			{
+				modelString += "\n"
+			}
+		}
+		
+		fileIO.exportToFileInDocs(model.mapTitle(), fileExtension:"map", pathFromDocs:"Maps", contents:modelString)
+	}
+    
     func exportModel(_ model:TileMap)
     {
         let modelString = modelToString(model)
-        fileIO.exportToFileInDocs(model.mapTitle(), fileExtension:"map", pathFromDocs:"Sources", contents:modelString)
+        fileIO.exportToFileInDocs(model.mapTitle(), fileExtension:"map", pathFromDocs:"Maps", contents:modelString)
     }
     
     func modelToString(_ model:TileMap) -> String

@@ -24,7 +24,7 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 	// Model
 	//////////////////////////////////////////////////////////////////////////////////////////
 	var map:TileMap
-	
+	var needsExport:Bool = false
 	var cursorBrush:Int
 	
 	//////////////////////////////////////////////////////////////////////////////////////////
@@ -47,20 +47,32 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 		
 		let rustTilesetData = TilesetIO().importTilesetData("Rust")
 		
-		map = TileMap(bounds:TileRect(left:0, right:25, up:25, down:0), title:"TESTING")
-		map.swapTilesetData(rustTilesetData)
-		map.setAllTerrainTiles(0, directly:true)
-		for x in 0..<25
+		var mapBounds = TileRect(left:0, right:8, up:8, down:0)
+		let mapName = "TOAST1"	
+		map = TileMap(bounds:mapBounds, title:mapName)
+		if let importedMap = TileMapIO().importSimpleModel(mapName)
 		{
-			for y in 0..<25
+			map = importedMap
+			mapBounds = map.getBounds()
+		}
+		else
+		{
+			map.setAllTerrainTiles(0, directly:true)
+			for x in mapBounds.left...mapBounds.right
 			{
-				if (coinFlip())
+				for y in mapBounds.down...mapBounds.up
 				{
-					let coord = DiscreteTileCoord(x:x, y:y)
-					map.directlySetTerrainTileAt(coord, uid:1)
+					if (coinFlip())
+					{
+						let coord = DiscreteTileCoord(x:x, y:y)
+						map.directlySetTerrainTileAt(coord, uid:1)
+					}
 				}
 			}
 		}
+		
+		map.swapTilesetData(rustTilesetData)
+		
 		
 		let viewBorderWidth = CGFloat(200.0)
 		let viewSize = CGSize(width:window.width - viewBorderWidth, height:window.height - viewBorderWidth)
@@ -118,6 +130,12 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 		{
 			_ = map.applyNextChange()
 		}
+		
+		if (needsExport)
+		{
+			TileMapIO().exportModelToDisk(map)
+			needsExport = false
+		}
 	}
 	
 	func attemptTilePlacement(event:NSEvent)
@@ -128,10 +146,9 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 			if let coord = mapView.tileAtLocation(locationInMapView)
 			{
 				placeTile(coord, tile:cursorBrush)
+				needsExport = true
 			}
 		}
-		
-		TileMapIO().exportModel(map)
 	}
 	
 	////////////////////////////////////////////////////////////////////////////////////////
@@ -176,7 +193,6 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 	
 	func changeSelection(value:Int)
 	{
-		print(value)
 		cursorBrush = value
 	}
 	
