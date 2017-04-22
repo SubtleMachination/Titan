@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
+class EditorScene: SKScene, NavigationResponder, MapExpanderResponder, TilePaletteResponder
 {
 	////////////////////////////////////////////////////////////////////////////////////////
 	// View
@@ -32,6 +32,7 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 	//////////////////////////////////////////////////////////////////////////////////////////
 	
 	var navigation:NavigationPane
+	var expander:MapExpanderPane
 	var tileSelection:TilePalette
 	
 	override init(size:CGSize)
@@ -47,8 +48,9 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 		
 		let rustTilesetData = TilesetIO().importTilesetData("Rust")
 		
-		var mapBounds = TileRect(left:0, right:8, up:8, down:0)
-		let mapName = "TOAST1"	
+		var mapBounds = TileRect(left:0, right:4, up:4, down:0)
+//		let mapName = "Rust_1a"
+		let mapName = "display_map_1combo"
 		map = TileMap(bounds:mapBounds, title:mapName)
 		if let importedMap = TileMapIO().importSimpleModel(mapName)
 		{
@@ -78,7 +80,7 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 		let viewSize = CGSize(width:window.width - viewBorderWidth, height:window.height - viewBorderWidth)
 		let tileSize = CGSize(width: 32, height: 32)
 		mapView = TileMapView(window:window, viewSize:viewSize, tileSize:tileSize)
-		mapView.position = center
+		mapView.position = center - CGPoint(x:0, y:viewBorderWidth/4)
 		
 		mapView.swapTileset(tileset)
 		map.registerDirectObserver(mapView)
@@ -94,8 +96,11 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 		navigation = NavigationPane()
 		navigation.position = CGPoint(x:viewBorderWidth/4.0, y:viewBorderWidth/4.0)
 		
+		expander = MapExpanderPane()
+		expander.position = navigation.position + CGPoint(x:0.0, y:viewBorderWidth)
+		
 		tileSelection = TilePalette(width:viewSize.width, height:viewBorderWidth/2.0, tileset:tileset)
-		tileSelection.position = CGPoint(x:center.x, y:window.height - viewBorderWidth/4.0)
+		tileSelection.position = CGPoint(x:center.x, y:window.height - viewBorderWidth/2.0)
 		
 		//////////////////////////////
 		// INITIALIZE
@@ -105,15 +110,18 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 		
 		self.addChild(mapView)
 		self.addChild(navigation)
+		self.addChild(expander)
 		self.addChild(tileSelection)
 		
 		// Register Control Elements
 		navigation.registerResponder(responder:self)
+		expander.registerResponder(responder:self)
 		tileSelection.registerResponder(responder:self)
 	}
 	
 	override func mouseDown(with event:NSEvent) {
 		navigation.click(event:event)
+		expander.click(event:event)
 		tileSelection.click(event:event)
 		attemptTilePlacement(event:event)
 	}
@@ -156,6 +164,7 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 	////////////////////////////////////////////////////////////////////////////////////////
 	func placeTile(_ coord:DiscreteTileCoord, tile:Int)
 	{
+		print(coord.debug())
 		let change = Change(coord:coord, layer:TileLayer.terrain, value:tile, collaboratorUUID:"Internal")
 		
 		// Queue up the change to the view's map
@@ -165,6 +174,38 @@ class EditorScene: SKScene, NavigationResponder, TilePaletteResponder
 	func boardRange() -> TileRect
 	{
 		return map.getBounds()
+	}
+	
+	////////////////////////////////////////////////////////////////////////////////////////
+	// Expander Responder
+	////////////////////////////////////////////////////////////////////////////////////////
+
+	func expandUp()
+	{
+		print("expand up")
+		map.expandUp()
+		mapView.completelyRedrawView()
+	}
+	
+	func expandDown()
+	{
+		print("expand down")
+		map.expandDown()
+		mapView.completelyRedrawView()
+	}
+	
+	func expandLeft()
+	{
+		print("expand left")
+		map.expandLeft()
+		mapView.completelyRedrawView()
+	}
+	
+	func expandRight()
+	{
+		print("expand right")
+		map.expandRight()
+		mapView.completelyRedrawView()
 	}
 	
 	////////////////////////////////////////////////////////////////////////////////////////

@@ -259,7 +259,6 @@ class TileMapIO
 	
 	func exportModelToDisk(_ model:TileMap)
 	{
-		print("Exporting")
 		var modelString = ""
 		let bounds = model.getBounds()
 		let tileData = model.allTerrainData()

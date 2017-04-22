@@ -14,6 +14,7 @@
 		C17A6EB91E620E0E0078CFAE /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A6EB81E620E0E0078CFAE /* Shape.swift */; };
 		C190C46A1E9B8E1900CF4447 /* NavigationPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C4691E9B8E1900CF4447 /* NavigationPane.swift */; };
 		C190C46E1E9B930A00CF4447 /* Common.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C190C46D1E9B930A00CF4447 /* Common.atlas */; };
+		C192FABF1EA99B58003C2292 /* MapExpanderPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C192FABE1EA99B58003C2292 /* MapExpanderPane.swift */; };
 		C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */; };
 		C1A4CC911E58C6ED003D1869 /* GenerateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC901E58C6ED003D1869 /* GenerateScene.swift */; };
 		C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC921E58C6ED003D1869 /* ViewController.swift */; };
@@ -80,6 +81,7 @@
 		C17A6EB81E620E0E0078CFAE /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = Source/Models/Shape.swift; sourceTree = "<group>"; };
 		C190C4691E9B8E1900CF4447 /* NavigationPane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationPane.swift; sourceTree = "<group>"; };
 		C190C46D1E9B930A00CF4447 /* Common.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Common.atlas; sourceTree = "<group>"; };
+		C192FABE1EA99B58003C2292 /* MapExpanderPane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapExpanderPane.swift; sourceTree = "<group>"; };
 		C1A4CC871E58C6ED003D1869 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1A4CC901E58C6ED003D1869 /* GenerateScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateScene.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				C1EDE8051E58F08D00362F54 /* TileView.swift */,
 				C1BF4A811E998FA700AB8AE2 /* SimpleButton.swift */,
 				C190C4691E9B8E1900CF4447 /* NavigationPane.swift */,
+				C192FABE1EA99B58003C2292 /* MapExpanderPane.swift */,
 				C11EB3A61E9DB18800E2B599 /* TilePalette.swift */,
 			);
 			name = Views;
@@ -472,6 +475,7 @@
 				C1EDE7E31E58E82000362F54 /* AngleUtility.swift in Sources */,
 				C1EDE7E71E58E82000362F54 /* SKSpriteNodeUtility.swift in Sources */,
 				C1EDE80C1E58F16100362F54 /* Tileset.swift in Sources */,
+				C192FABF1EA99B58003C2292 /* MapExpanderPane.swift in Sources */,
 				C1EDE7E41E58E82000362F54 /* ColorUtility.swift in Sources */,
 				C1EDE81F1E58F54500362F54 /* FileIO.swift in Sources */,
 				C1EDE8071E58F08D00362F54 /* TileMapView.swift in Sources */,

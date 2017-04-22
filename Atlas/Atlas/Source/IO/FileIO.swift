@@ -67,7 +67,6 @@ class FileIO
     func exportToFileInDocs(_ fileName:String, fileExtension:String, pathFromDocs:String?, contents:String)
     {
         let filePath = filePathInDocs(fileName, fileExtension:fileExtension, pathFromDocs:pathFromDocs)
-        print("Exporting to: \(filePath)")
         if let pathFromDocs = pathFromDocs
         {
             let intermediatePath = filePathForDirectoryInDocs(pathFromDocs)

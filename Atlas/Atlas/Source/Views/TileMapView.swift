@@ -670,7 +670,11 @@ class TileMapView : SKNode, DirectMapObserver
     func completelyRedrawView()
     {
         clearView()
-        
+		
+		mapBounds = modelDelegate!.getBounds()
+		mapExtraBounds = mapBounds.outerRect()
+		let _ = recalculateTileRect()
+		
         for x in tileViewRect!.left...tileViewRect!.right
         {
             for y in tileViewRect!.down...tileViewRect!.up

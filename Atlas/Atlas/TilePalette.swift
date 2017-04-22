@@ -137,7 +137,6 @@ class TilePalette : SKNode, ButtonResponder
 	
 	func buttonPressed(id: String)
 	{
-		print("button pressed")
 		if let tileId = Int(id)
 		{
 			changeSelection(value:id)

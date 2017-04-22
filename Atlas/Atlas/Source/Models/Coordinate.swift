@@ -311,6 +311,16 @@ struct TileRect:Equatable,Hashable
 	{
 		return TileRect(left:left-1, right:right, up:up, down:down)
 	}
+	
+	func expandAbove() -> TileRect
+	{
+		return TileRect(left:left, right:right, up:up+1, down:down)
+	}
+	
+	func expandRight() -> TileRect
+	{
+		return TileRect(left:left, right:right+1, up:up, down:down)
+	}
     
     func expandVertically() -> TileRect
     {

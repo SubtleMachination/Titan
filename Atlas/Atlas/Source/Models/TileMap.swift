@@ -192,6 +192,56 @@ class TileMap : DirectModelDelegate
     {
         return bounds
     }
+	
+	func expandUp()
+	{
+		// Change the bounds
+		bounds = bounds.expandAbove()
+	}
+	
+	func expandRight()
+	{
+		// Change the bounds
+		bounds = bounds.expandRight()
+	}
+	
+	func expandLeft()
+	{
+		// Change the bounds
+		bounds = bounds.expandRight()
+		// Shift the position of every tile
+		var terrainClone = [DiscreteTileCoord: Int]()
+		for (coord, value) in terrainTiles
+		{
+			terrainClone[coord] = value
+		}
+		
+		clearAllTiles()
+		
+		for (coord, value) in terrainClone
+		{
+			terrainTiles[coord.right()] = value
+		}
+	}
+	
+	func expandDown()
+	{
+		// Change the bounds
+		bounds = bounds.expandAbove()
+		// Shift the position of every tile
+		var terrainClone = [DiscreteTileCoord: Int]()
+		for (coord, value) in terrainTiles
+		{
+			terrainClone[coord] = value
+		}
+		
+		clearAllTiles()
+		
+		for (coord, value) in terrainClone
+		{
+			terrainTiles[coord.up()] = value
+		}
+	}
     
     func directlySetTerrainTileAt(_ coord:DiscreteTileCoord, uid:Int)
     {
