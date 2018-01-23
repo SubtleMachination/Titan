@@ -11,14 +11,19 @@ import Foundation
 class Agent
 {
 	let delegate:ActorDelegate
+	let canvas:Shape
 	
-	init(delegate:ActorDelegate)
+	init(delegate:ActorDelegate, canvas:Shape)
 	{
 		self.delegate = delegate
+		self.canvas = canvas
 	}
 	
 	func activate()
 	{
-		Design001(delegate:delegate).trigger()
+//		let map = TileMapIO().importSimpleModel("Rust_1a")!
+		let style = Motif(value:1)
+		
+		Design002(delegate:delegate, canvas:canvas, style:style).trigger()
 	}
 }

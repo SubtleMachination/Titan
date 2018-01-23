@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		C11EB3A71E9DB18800E2B599 /* TilePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EB3A61E9DB18800E2B599 /* TilePalette.swift */; };
+		C12160351EB2C26700297174 /* Extractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12160341EB2C26700297174 /* Extractor.swift */; };
+		C130DD451EB7B39000779818 /* FRDensityModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C130DD441EB7B39000779818 /* FRDensityModule.swift */; };
+		C130DD471EB7B3B800779818 /* FRDensitySubdivisionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C130DD461EB7B3B800779818 /* FRDensitySubdivisionModule.swift */; };
+		C130DD491EB7B3DB00779818 /* FRContentTraversalModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C130DD481EB7B3DB00779818 /* FRContentTraversalModule.swift */; };
+		C130DD4C1EB7B41100779818 /* SkeletonMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C130DD4B1EB7B41100779818 /* SkeletonMap.swift */; };
+		C130DD4E1EB7B42000779818 /* DensityMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C130DD4D1EB7B42000779818 /* DensityMap.swift */; };
+		C130DD501EB7B46400779818 /* FRDynamicRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C130DD4F1EB7B46400779818 /* FRDynamicRegion.swift */; };
+		C130DD521EB7B57F00779818 /* FRSkeletonModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C130DD511EB7B57F00779818 /* FRSkeletonModule.swift */; };
+		C130DD541EB974D100779818 /* FRAnalysisRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C130DD531EB974D100779818 /* FRAnalysisRegion.swift */; };
 		C13E2B071E7E366A00B554C6 /* ATFillArea2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13E2B061E7E366A00B554C6 /* ATFillArea2.swift */; };
 		C15591CB1E631EC4004F8F15 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15591CA1E631EC4004F8F15 /* Change.swift */; };
 		C1742E9E1E993A0400F6596C /* EditorScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1742E9D1E993A0400F6596C /* EditorScene.swift */; };
@@ -15,6 +24,7 @@
 		C190C46A1E9B8E1900CF4447 /* NavigationPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C4691E9B8E1900CF4447 /* NavigationPane.swift */; };
 		C190C46E1E9B930A00CF4447 /* Common.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C190C46D1E9B930A00CF4447 /* Common.atlas */; };
 		C192FABF1EA99B58003C2292 /* MapExpanderPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C192FABE1EA99B58003C2292 /* MapExpanderPane.swift */; };
+		C196E4921EB0438D00DC6DE8 /* Design002.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196E4911EB0438D00DC6DE8 /* Design002.swift */; };
 		C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */; };
 		C1A4CC911E58C6ED003D1869 /* GenerateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC901E58C6ED003D1869 /* GenerateScene.swift */; };
 		C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4CC921E58C6ED003D1869 /* ViewController.swift */; };
@@ -75,6 +85,15 @@
 
 /* Begin PBXFileReference section */
 		C11EB3A61E9DB18800E2B599 /* TilePalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TilePalette.swift; sourceTree = "<group>"; };
+		C12160341EB2C26700297174 /* Extractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extractor.swift; sourceTree = "<group>"; };
+		C130DD441EB7B39000779818 /* FRDensityModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRDensityModule.swift; sourceTree = "<group>"; };
+		C130DD461EB7B3B800779818 /* FRDensitySubdivisionModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRDensitySubdivisionModule.swift; sourceTree = "<group>"; };
+		C130DD481EB7B3DB00779818 /* FRContentTraversalModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRContentTraversalModule.swift; sourceTree = "<group>"; };
+		C130DD4B1EB7B41100779818 /* SkeletonMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonMap.swift; sourceTree = "<group>"; };
+		C130DD4D1EB7B42000779818 /* DensityMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DensityMap.swift; sourceTree = "<group>"; };
+		C130DD4F1EB7B46400779818 /* FRDynamicRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRDynamicRegion.swift; sourceTree = "<group>"; };
+		C130DD511EB7B57F00779818 /* FRSkeletonModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRSkeletonModule.swift; sourceTree = "<group>"; };
+		C130DD531EB974D100779818 /* FRAnalysisRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRAnalysisRegion.swift; sourceTree = "<group>"; };
 		C13E2B061E7E366A00B554C6 /* ATFillArea2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATFillArea2.swift; sourceTree = "<group>"; };
 		C15591CA1E631EC4004F8F15 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Change.swift; path = Source/Models/Change.swift; sourceTree = "<group>"; };
 		C1742E9D1E993A0400F6596C /* EditorScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorScene.swift; sourceTree = "<group>"; };
@@ -82,6 +101,7 @@
 		C190C4691E9B8E1900CF4447 /* NavigationPane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationPane.swift; sourceTree = "<group>"; };
 		C190C46D1E9B930A00CF4447 /* Common.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Common.atlas; sourceTree = "<group>"; };
 		C192FABE1EA99B58003C2292 /* MapExpanderPane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapExpanderPane.swift; sourceTree = "<group>"; };
+		C196E4911EB0438D00DC6DE8 /* Design002.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Design002.swift; sourceTree = "<group>"; };
 		C1A4CC871E58C6ED003D1869 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A4CC8A1E58C6ED003D1869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1A4CC901E58C6ED003D1869 /* GenerateScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateScene.swift; sourceTree = "<group>"; };
@@ -152,6 +172,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C130DD4A1EB7B40700779818 /* EvaluationModels */ = {
+			isa = PBXGroup;
+			children = (
+				C130DD4B1EB7B41100779818 /* SkeletonMap.swift */,
+				C130DD4D1EB7B42000779818 /* DensityMap.swift */,
+				C130DD4F1EB7B46400779818 /* FRDynamicRegion.swift */,
+				C130DD531EB974D100779818 /* FRAnalysisRegion.swift */,
+			);
+			name = EvaluationModels;
+			sourceTree = "<group>";
+		};
 		C1742EA41E99713700F6596C /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +368,7 @@
 			children = (
 				C1FFBF161E73A41E003109B7 /* Task.swift */,
 				C1FFBF091E73A3C3003109B7 /* Design001.swift */,
+				C196E4911EB0438D00DC6DE8 /* Design002.swift */,
 				C1F806211E7DD261003ED977 /* ATFillArea.swift */,
 				C13E2B061E7E366A00B554C6 /* ATFillArea2.swift */,
 				C1CF825C1E8D2FF30060450D /* ATFillArea3.swift */,
@@ -349,6 +381,12 @@
 		C1FFBEF41E735DA3003109B7 /* Evaluations */ = {
 			isa = PBXGroup;
 			children = (
+				C130DD4A1EB7B40700779818 /* EvaluationModels */,
+				C12160341EB2C26700297174 /* Extractor.swift */,
+				C130DD441EB7B39000779818 /* FRDensityModule.swift */,
+				C130DD461EB7B3B800779818 /* FRDensitySubdivisionModule.swift */,
+				C130DD481EB7B3DB00779818 /* FRContentTraversalModule.swift */,
+				C130DD511EB7B57F00779818 /* FRSkeletonModule.swift */,
 			);
 			name = Evaluations;
 			sourceTree = "<group>";
@@ -481,14 +519,19 @@
 				C1EDE8071E58F08D00362F54 /* TileMapView.swift in Sources */,
 				C17A6EB91E620E0E0078CFAE /* Shape.swift in Sources */,
 				C1EDE7E61E58E82000362F54 /* RandomUtility.swift in Sources */,
+				C130DD541EB974D100779818 /* FRAnalysisRegion.swift in Sources */,
 				C1EDE7E51E58E82000362F54 /* IntUtility.swift in Sources */,
+				C130DD491EB7B3DB00779818 /* FRContentTraversalModule.swift in Sources */,
 				C1EDE7E81E58E82000362F54 /* UserDefaultsUtility.swift in Sources */,
+				C130DD521EB7B57F00779818 /* FRSkeletonModule.swift in Sources */,
 				C1FFBF0C1E73A3C3003109B7 /* Design001.swift in Sources */,
 				C190C46A1E9B8E1900CF4447 /* NavigationPane.swift in Sources */,
 				C13E2B071E7E366A00B554C6 /* ATFillArea2.swift in Sources */,
 				C1EDE81B1E58F4EE00362F54 /* TilesetIO.swift in Sources */,
 				C1A4CC931E58C6ED003D1869 /* ViewController.swift in Sources */,
+				C130DD4E1EB7B42000779818 /* DensityMap.swift in Sources */,
 				C1BF4A821E998FA700AB8AE2 /* SimpleButton.swift in Sources */,
+				C130DD451EB7B39000779818 /* FRDensityModule.swift in Sources */,
 				C1EDE8081E58F08D00362F54 /* TileView.swift in Sources */,
 				C15591CB1E631EC4004F8F15 /* Change.swift in Sources */,
 				C1FFBF121E73A3EA003109B7 /* ATPlaceTile.swift in Sources */,
@@ -508,12 +551,17 @@
 				C1742E9E1E993A0400F6596C /* EditorScene.swift in Sources */,
 				C1CF825D1E8D2FF30060450D /* ATFillArea3.swift in Sources */,
 				C1EDE7E21E58E82000362F54 /* ACEaseUtility.swift in Sources */,
+				C196E4921EB0438D00DC6DE8 /* Design002.swift in Sources */,
 				C1EDE8211E58FB2800362F54 /* ActorDelegate.swift in Sources */,
 				C1EDE81D1E58F50200362F54 /* AtomicMap.swift in Sources */,
 				C1A4CC8B1E58C6ED003D1869 /* AppDelegate.swift in Sources */,
+				C130DD501EB7B46400779818 /* FRDynamicRegion.swift in Sources */,
 				C1F806221E7DD261003ED977 /* ATFillArea.swift in Sources */,
+				C130DD471EB7B3B800779818 /* FRDensitySubdivisionModule.swift in Sources */,
 				C1FFBF151E73A410003109B7 /* TileAssignment.swift in Sources */,
 				C1EDE7EC1E58EA1600362F54 /* Coordinate.swift in Sources */,
+				C12160351EB2C26700297174 /* Extractor.swift in Sources */,
+				C130DD4C1EB7B41100779818 /* SkeletonMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

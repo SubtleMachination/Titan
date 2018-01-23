@@ -20,7 +20,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 		
 		let skView = self.view as! SKView
-		scene = EditorScene(size:(skView.frame.size))
+		scene = GenerateScene(size:(skView.frame.size))
 		
 		skView.showsFPS = true
 		skView.showsNodeCount = true

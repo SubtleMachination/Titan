@@ -245,9 +245,31 @@ class Shape
 		return nodes
 	}
 	
+	func ripplePools() -> [Set<DiscreteTileCoord>]
+	{
+		var pools = [Set<DiscreteTileCoord>]()
+		var centerReached = false
+		var rippleIndex = 0
+		while (!centerReached)
+		{
+			let ripplePool = ripple(rippleIndex, rEnd:rippleIndex)
+			if (ripplePool.count > 0)
+			{
+				pools.append(ripplePool)
+			}
+			else
+			{
+				centerReached = true
+			}
+			rippleIndex -= 1
+		}
+		
+		return pools
+	}
+	
 	//////////////////////////////////////////////////////////////////////////////////////////
 	// RIPPLE POOL (INCLUDES BOTH EXTRUSIONS AND INTRUSIONS)
-	// @param rStart Int the starting radius of inset. Must be 1 or more.
+	// @param rStart Int the starting radius of inset.
 	//  -1: 1-tile inset
 	//   0: actual edge of shape
 	//   1: 1-tile offset
@@ -269,7 +291,7 @@ class Shape
 			// is there an intrusion component?
 			if (rStart < 1 || rEnd < 1)
 			{
-				let intrusionStart = min(0, rEnd)
+				let intrusionStart = -1*min(0, rEnd)
 				let intrusionEnd = -1*min(rStart, rEnd)
 				
 				pool.formUnion(intrusionPool(intrusionStart, rEnd:intrusionEnd))

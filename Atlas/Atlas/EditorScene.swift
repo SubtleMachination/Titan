@@ -49,8 +49,8 @@ class EditorScene: SKScene, NavigationResponder, MapExpanderResponder, TilePalet
 		let rustTilesetData = TilesetIO().importTilesetData("Rust")
 		
 		var mapBounds = TileRect(left:0, right:4, up:4, down:0)
-//		let mapName = "Rust_1a"
-		let mapName = "display_map_1combo"
+		let mapName = "THANKS"
+		
 		map = TileMap(bounds:mapBounds, title:mapName)
 		if let importedMap = TileMapIO().importSimpleModel(mapName)
 		{
